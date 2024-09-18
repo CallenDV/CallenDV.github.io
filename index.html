@@ -7,229 +7,261 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #1e90ff;
+            --background-color: #0a192f;
+            --text-color: #e6f1ff;
+            --card-background: rgba(255, 255, 255, 0.1);
+            --glass-edge: rgba(255, 255, 255, 0.5);
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f1f1f1;
-            color: #333;
-        }
-
-        header {
-            background-color: #242424;
-            color: white;
-            padding: 2em;
-            text-align: center;
-            font-size: 2em;
-            font-weight: 700;
-        }
-
-        .topbar {
-            background-color: #333;
-            color: white;
-            padding: 0.5em;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .topbar-buttons {
-            display: flex;
-        }
-
-        .topbar-button {
-            margin-left: 20px;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .topbar-button:hover {
-            color: #ff0000;
+            background: linear-gradient(135deg, #0a192f, #172a45);
+            color: var(--text-color);
+            min-height: 100vh;
         }
 
         .container {
             max-width: 1200px;
-            margin: 2em auto;
+            margin: 0 auto;
             padding: 2em;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e90ff, #00bfff);
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(30, 144, 255, 0.5);
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin: 0;
+            position: relative;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1em 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            padding: 0.5em 1em;
+            border-radius: 20px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+        }
+
+        nav ul li a:hover {
+            color: #e0e0e0;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+        }
+
+        .card {
+            background-color: var(--card-background);
+            border-radius: 15px;
+            padding: 2em;
+            margin-bottom: 2em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+                        0 0 0 1px var(--glass-edge),
+                        inset 0 0 0 1px var(--glass-edge),
+                        inset 0 0 20px rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 
+                        0 0 0 1px var(--glass-edge),
+                        inset 0 0 0 1px var(--glass-edge),
+                        inset 0 0 30px rgba(255, 255, 255, 0.07);
         }
 
         h2 {
-            color: #333;
-            font-weight: 700;
-        }
-
-        p {
-            font-size: 1.1em;
-            line-height: 1.5;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        .icon {
-            margin-right: 8px;
-            color: #ff0000;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
         }
 
         .project {
             margin-bottom: 2em;
-            padding-bottom: 2em;
-            border-bottom: 1px solid #ddd;
+            padding: 1em;
+            background: linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .project:hover {
+            background: linear-gradient(to bottom right, rgba(255,255,255,0.15), rgba(255,255,255,0.07));
         }
 
         .project h3 {
-            margin-top: 0;
-        }
-
-        .project p {
-            margin-top: 0.5em;
-        }
-
-        .project-links {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            color: var(--primary-color);
         }
 
         .project-links a {
-            color: #333;
+            color: var(--primary-color);
             text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
+            margin-right: 1em;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            padding: 0.3em 0.8em;
+            border-radius: 15px;
+            background: linear-gradient(to bottom, rgba(30,144,255,0.2), rgba(30,144,255,0.1));
         }
 
         .project-links a:hover {
-            color: #ff0000;
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            background: linear-gradient(to bottom, rgba(30,144,255,0.3), rgba(30,144,255,0.2));
+        }
+
+        .icon {
+            color: var(--primary-color);
+            margin-right: 0.5em;
+            text-shadow: 0 0 3px rgba(30, 144, 255, 0.5);
         }
 
         footer {
-            background-color: #242424;
+            background-color: rgba(0, 0, 0, 0.5);
             color: white;
             text-align: center;
-            padding: 1em;
-            position: fixed;
-            width: 100%;
+            padding: 1em 0;
+            position: relative;
             bottom: 0;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1em;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 0.5em 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="topbar">
+    <header>
         <h1>CheeseDev</h1>
-        <div class="topbar-buttons">
-            <a href="#portfolio" class="topbar-button">Portfolio</a>
-            <a href="#links" class="topbar-button">Links</a>
-            <a href="#contact" class="topbar-button">Contact Me</a>
-        </div>
-    </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#links">Links</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="container" id="portfolio">
-        <h2>About Me</h2>
-        <h3>Journey to Coding</h3>
-        <p>It all started with me and my brother, Logan- on the family computer, him doing some computer related stuff. I couldn't mind but watch him, as he did this stuff that I had never seen before...</p>
+    <div class="container">
+        <section id="about" class="card">
+            <h2>About Me</h2>
+            <p>I'm a passionate developer with a love for coding, art, and innovation. My journey started with curiosity and has led me to explore various programming languages and creative pursuits.</p>
+            <h3>Skills & Interests</h3>
+            <ul>
+                <li><i class="fas fa-code icon"></i>HTML5, CSS, JavaScript</li>
+                <li><i class="fas fa-terminal icon"></i>Batch Scripting</li>
+                <li><i class="fas fa-paint-brush icon"></i>Digital Art</li>
+                <li><i class="fas fa-gamepad icon"></i>Game Development</li>
+                <li><i class="fas fa-video icon"></i>Video Production</li>
+            </ul>
+        </section>
 
-        <h3>Current Focus</h3>
-        <p>Now, I've returned to the higher languages, like C and JS, to code in regularly. I still do occasionally make Scratch projects, among other things. Neat, right?</p>
-
-        <h3>Aspirations and Goals</h3>
-        <p>Right now, my current goal is to learn more languages, like Ruby, Rust, and also start trying out mobile apps. I am also trying to learn and improve on my current art styles, with my (much better artist) brother, Logan.</p>
-        <h3>Hobbies</h3>
-        <ul>
-            <li><i class="fas fa-paint-brush icon"></i>Art</li>
-            <li><i class="fas fa-gamepad icon"></i>Games</li>
-            <li><i class="fas fa-code icon"></i>Coding</li>
-            <li><i class="fas fa-video icon"></i>Video Production</li>
-            <li><i class="fas fa-ellipsis-h icon"></i>And a lot of other things I don't have the time to list.</li>
-        </ul>
-
-        <h3>Skillset</h3>
-        <p>I am experienced with many programming languages, such as some ones you probably already know, like HTML5, JS, and CSS. I am also experienced with other ones, like Batch, and some others.</p>
-
-        <h2>Project Highlights</h2>
-        <div class="project">
-            <h3>DiamondOS2</h3>
-            <p>A comprehensive operating system I've been working on for a while, with a focus on user-friendliness and performance.</p>
-            <div class="project-links">
-                <a href="#" disabled>Learn More</a>
-                <a href="#" disabled>This project is still private. </a>
+        <section id="projects" class="card">
+            <h2>Project Highlights</h2>
+            <div class="project">
+                <h3>DiamondOS2</h3>
+                <p>A comprehensive operating system focused on user-friendliness and performance.</p>
+                <div class="project-links">
+                    <a href="#" disabled>Learn More</a>
+                    <a href="#" disabled>Private Project</a>
+                </div>
             </div>
-        </div>
-        <div class="project">
-            <h3>DOSTV2</h3>
-            <p>An advanced command line interface I've been developing, with a range of powerful features and customization options.</p>
-            <div class="project-links">
-                <a href="#" disabled>Learn More</a>
-                <a href="#" disabled>This project is still private. </a>
+            <div class="project">
+                <h3>DOSTV2</h3>
+                <p>An advanced command line interface with powerful features and customization options.</p>
+                <div class="project-links">
+                    <a href="#" disabled>Learn More</a>
+                    <a href="#" disabled>Private Project</a>
+                </div>
             </div>
-        </div>
-        <div class="project">
-            <h3>PrizVideo</h3>
-            <p>A video platform I created to showcase my work and share it with the community.</p>
-            <div class="project-links">
-                <a href="https://prizvideo.github.io/PrizVideo-Test/">Visit PrizVideo</a>
-                <a href="github.com/PrizVideo">GitHub</a>
+            <div class="project">
+                <h3>PrizVideo</h3>
+                <p>A video platform to showcase and share my work with the community.</p>
+                <div class="project-links">
+                    <a href="https://prizvideo.github.io/PrizVideo-Test/">Visit PrizVideo</a>
+                    <a href="https://github.com/PrizVideo">GitHub</a>
+                </div>
             </div>
-        </div>
-        <div class="project">
-            <h3>Prizmarine</h3>
-            <p>A nostalgic project I've helped with in the past, which was a search engine focused on privacy and security.</p>
-            <div class="project-links">
-                <a href="https://pepsearch.xyz">The Prizmarine website was shut down semi-recently.</a>
-                <a href="#" disabled>The GitHub Page was removed.</a>
-            </div>
-        </div>
-        <div class="project">
-            <h3>Mayzer</h3>
-            <p>A versatile tool I've helped develop for automating various tasks and workflows.</p>
-            <div class="project-links">
-                <a href="#" disabled>Learn More</a>
-                <a href="#" disabled>Mayzer was shut down alongside Prizmarine.</a>
-            </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="container" id="links">
-        <h2>Links</h2>
-        <a href="https://prizvideo.github.io/PrizVideo-Main/">PrizVideo Main Website</a>
-        <br>
-        <a href="https://prizvideo.github.io/PrizVideo-Test/">PrizVideo Test Website</a>
-        <br>
-        <br>
-        <a href="https://pepsearch.xyz">Prizmarine</a>
-    </div>
+        <section id="links" class="card">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://prizvideo.github.io/PrizVideo-Main/">PrizVideo Main Website</a></li>
+                <li><a href="https://prizvideo.github.io/PrizVideo-Test/">PrizVideo Test Website</a></li>
+                <li><a href="https://pepsearch.xyz">Prizmarine (Archived)</a></li>
+            </ul>
+        </section>
 
-    <div class="container" id="contact">
-        <h2>Contact Me</h2>
-        <p>
-          <i class="fas fa-envelope icon"></i>Email: callendv1889@gmail.com
-        </p>
-        <p>
-          <i class="fab fa-github icon"></i>GitHub: @CallenDV
-        </p>
-        <p>
-          <i class="fab fa-youtube icon"></i>YouTube: @Mr.DryTuber
-        </p>
-        <p>
-          I don't check my emails and messages often, so it might be a bit before I'd respond to you.
-        </p>
+        <section id="contact" class="card">
+            <h2>Contact Me</h2>
+            <p><i class="fas fa-envelope icon"></i>Email: callendv1889@gmail.com</p>
+            <p><i class="fab fa-github icon"></i>GitHub: @CallenDV</p>
+            <p><i class="fab fa-youtube icon"></i>YouTube: @cheesedev1</p>
+            <p>Note: Response times may vary due to infrequent message checking.</p>
+        </section>
     </div>
 
     <footer>
-        &copy; Copyright CheeseDev 2024
+        &copy; 2024 CheeseDev. All rights reserved. Rendition 3.
     </footer>
 </body>
 </html>
