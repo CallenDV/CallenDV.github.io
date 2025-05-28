@@ -154,20 +154,20 @@
             <div class="win7">
                 <div class="window active" style="max-width: 300px">
                     <div class="title-bar">
-                        <div class="title-bar-text"><b>qotd</b> for 5/27/25</div>
+                        <div class="title-bar-text"><b>qotd</b> for 5/28/25</div>
                     </div>
                     <div class="window-body has-space">
-                        <p>woohoo! time for question of the day. Play it by pressing the link below. <br><br><a href="#qotd1"><button>play the qotd</button></a></p>
+                        <p>woohoo! time for question of the day. Play it by pressing the link below. <br><br><a href="#qotd2"><button>play the qotd</button></a></p>
                     </div>
                 </div>
             </div>
             <div class="win7">
-                <div class="window active" style="max-width: 300px; margin: 10px;">
+                <div class="window active" style="max-width: 300px">
                     <div class="title-bar">
-                        <div class="title-bar-text">null</div>
+                        <div class="title-bar-text"><b>qotd</b> for 5/27/25</div>
                     </div>
                     <div class="window-body has-space">
-                        <p>there are no other posts available at this time.</p>
+                        <p>woohoo! time for question of the day. Play it by pressing the link below. <br><br><a href="#qotd1"><button>play the qotd</button></a></p>
                     </div>
                 </div>
             </div>
@@ -237,6 +237,57 @@ var submitAnswer1 = function() {
   if (val == "" ) {
     alert('please select an answer.');
   } else if ( val == "among sea urchin spines" ) {
+    alert('you are correct!');
+    history.back();
+  } else {
+    alert('unfortunately, you are wrong. try again!');
+  }
+};
+        </script>
+    </div></div>
+    <div class="win7"><div class="window active is-bright" id="qotd2" role="dialog" aria-labelledby="dialog-title">
+        <div class="title-bar">
+            <div class="title-bar-text" id="dialog-title">qotd for 5/28/25</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" onclick="history.back()"></button>
+            </div>
+        </div>
+        <div class="window-body has-space">
+<fieldset>
+  <div class="field-row">which mammal is the only one capable of sustained, powered flight?</div>
+  <div class="field-row">
+    <input id="sg2" type="radio" name="choice2" value="sugar glider">
+    <label for="sg2">sugar glider</label>
+  </div>
+  <div class="field-row">
+    <input id="b2" type="radio" name="choice2" value="bat">
+    <label for="b2">bat</label>
+  </div>
+  <div class="field-row">
+    <input id="fs2" type="radio" name="choice2" value="flying squirrel">
+    <label for="fs2">flying squirrel</label>
+  </div>
+</fieldset>
+        </div>
+        <footer style="text-align: right">
+            <button onclick="submitAnswer1()">submit answer</button>
+            <button onclick="history.back()">cancel</button>
+        </footer>
+        <script>
+var submitAnswer1 = function() {
+
+  var radios = document.getElementsByName('choice2');
+  var val= "";
+  for (var i = 0, length = radios.length; i < length; i++) {
+      if (radios[i].checked) {
+         val = radios[i].value; 
+         break;
+       }
+  }
+  
+  if (val == "" ) {
+    alert('please select an answer.');
+  } else if ( val == "bat" ) {
     alert('you are correct!');
     history.back();
   } else {
