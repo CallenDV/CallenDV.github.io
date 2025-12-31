@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/7.css/dist/7.scoped.css">
+    <link rel="icon" type="image/icon" href="/new/assets/notext-tcslogo.png">
+    <link rel="stylesheet" href="https://crtstatic.neocities.org/dsring/onion/onionring.css">
+    <link rel="stylesheet" href="https://housepen.nekoweb.org/ring/onionring.css">
+    <link rel="stylesheet" href="https://christian-webring.nekoweb.org/onionring.css">
+    <link rel="stylesheet" href="https://flipnotering.neocities.org/onionring.css">
+    <link rel="stylesheet" href="https://epiccity.nekoweb.org/ring//onionring.css">
+    <link rel="stylesheet" href="https://terakun.nekoweb.org/ricepaddy/webring.css">
+    <script src="https://liquid-sunshine.neocities.org/ring.js"></script>
+    <title>welcome to tcs</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("https://wallpapercave.com/wp/wp14251242.jpg");
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        .navbar {
+            background: linear-gradient(to bottom, #fdfeff 0%, #f5f9fc 50%, #e7eef5 100%);
+            border-bottom: 1px solid #b3b3b3;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+        }
+
+        .column {
+            background: linear-gradient(to bottom, #ffffff 0%, #f7f7f7 100%);
+            border: 1px solid #d1d1d1;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 15px;
+        }
+
+        .side-column {
+            flex: 1;
+            margin: 0px 9px 0px 9px;
+            background-image: url("https://wallpaperaccess.com/full/9368870.png");
+            background-attachment: fixed;
+        }
+
+        .main-column {
+            flex: 2;
+        }
+
+        #aero-ring {
+            background: linear-gradient(to bottom, #0af 0%, #07c 100%);
+            border-radius: 10px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.5),
+            inset 0 2px 1px rgba(255, 255, 255, 0.15),
+            inset 0 -2px 1px rgba(0, 0, 0, 0.35);
+            font-family: sans-serif;
+            margin: 10px auto 0px auto;
+            max-width: 15rem;
+            padding: 0.75rem;
+        }
+
+        #aero-ring a,
+        #aero-ring a:visited {
+            color: white !important;
+        }
+
+        #aero-ring a:focus,
+        #aero-ring a:hover,
+        #aero-ring a:active {
+            color: lightgrey !important;
+        }
+
+        .badge-group { position: relative; display: inline-block; cursor: pointer; }
+        .badge-ping { position: absolute; right: -6px; top: -6px; z-index: 10; }
+        .badge-ping span { position: absolute; display: inline-flex; border-radius: 9999px; }
+        .badge-ping .ping-bg { height: 20px; width: 20px; animation: ping 1.5s cubic-bezier(0,0,0.2,1) infinite; background-color: #d18aff; opacity: 0.6; }
+        .badge-ping .ping-count { position: relative; height: 16px; width: 16px; background-color: #a56cff; color: white; font-size: 10px; font-weight: bold; display: flex; align-items: center; justify-content: center; border-radius: 9999px; box-shadow: 0 0 6px #a56cffaa; }
+        @keyframes ping { 75%,100%{ transform: scale(2); opacity:0; } }
+        .badge-button { position: relative; overflow: hidden; border-radius: 14px; background: linear-gradient(to bottom right,#1a1a1f,#0a0a0d); padding:1px; box-shadow:0 0 12px #a56cff33; transition: box-shadow 0.3s ease; }
+        .badge-inner { background-color:#111; border-radius:14px; display:flex; align-items:center; padding:10px 16px; gap:12px; transition:background 0.3s ease; flex-direction:column; }
+        .badge-icon { position:relative; display:flex; align-items:center; justify-content:center; height:42px; width:42px; border-radius:10px; background:linear-gradient(135deg,#c77dff,#9d4edd); box-shadow:0 0 10px #a56cff88; transition: transform 0.3s ease; }
+        .badge-icon svg { width:22px; height:22px; stroke:white; stroke-width:2; }
+        .badge-text { display:flex; flex-direction:column; align-items:flex-start; }
+        .badge-text span:first-child { color:#fff; font-size:14px; font-weight:600; }
+        .badge-text span:last-child { color:#b389ff; font-size:11px; }
+        .badge-dots { display:flex; gap:3px; margin-left:auto; }
+        .badge-dots div { width:6px; height:6px; border-radius:50%; background-color:#a56cff; opacity:0.8; transition:transform 0.3s ease; }
+        .badge-group:hover .badge-dots div { transform:scale(1.4); }
+        .badge-group:hover .badge-icon { transform:scale(1.1); }
+        .badge-group:hover .badge-inner { background:#1a1a1f; }
+        .badge-group:hover .badge-button { box-shadow:0 0 20px #b86fff66; }
+
+        :root {
+            --w9p1h3-background-image: url("https://nippoverse.xyz/retroring/mario64.png") !important;
+            --w9p1h3-background-size:cover !important;
+            --w9p1h3-background-color:pink !important;
+            --w9p1h3-background-size: cover !important;
+            --w9p1h3-border:5px solid pink !important;
+            --w9p1h3-border-radius:5px !important;
+            --w9p1h3-width:200px !important;
+            --w9p1h3-height:75px !important;
+            --w9p1h3-padding:1rem !important;
+            --w9p1h3-title-font:'Arial' !important;
+            --w9p1h3-title-color:rgb(255, 105, 155) !important;
+            --w9p1h3-title-size:35px !important;
+            --w9p1h3-title-align:center !important;
+            --w9p1h3-title-margin:5px !important;
+            --w9p1h3-title-height:25px !important;
+            --w9p1h3-title-spacing:3px !important;
+            --w9p1h3-title-weight:bold !important;
+            --w9p1h3-text-family:sans-serif !important;
+            --w9p1h3-text-color:rgb(0, 255, 200) !important;
+            --w9p1h3-text-size:14px !important;
+            --w9p1h3-text-align:center !important;
+            --w9p1h3-text-spacing:1px !important;
+            --w9p1h3-text-height:1em !important;
+            --w9p1h3-link-family:sans-serif !important;
+            --w9p1h3-link-color:cyan !important;
+            --w9p1h3-link-decoration:none !important;
+            --w9p1h3-link-weight:bold !important;
+            --w9p1h3-link-size:13px !important;
+        }
+    </style>
+    <script>
+(function() {
+  var sites = [
+    'https://osc-leaks.neocities.org/',
+    'https://ragazzasola.neocities.org/',
+    'https://ilovewebring.neocities.org/'
+  ];
+
+  var ringName = 'ILoveWebring';
+  var ringID = 'ilovewebring-widget';
+  var useIndex = true;
+  var indexPage = 'https://ilovewebring.neocities.org/webring.html';
+  var useRandom = true;
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var tag = document.getElementById(ringID);
+    if (!tag) return;
+
+    var thisSite = window.location.href;
+    var thisIndex = null;
+
+    for (var i = 0; i < sites.length; i++) {
+      if (thisSite.startsWith(sites[i])) {
+        thisIndex = i;
+        break;
+      }
+    }
+
+    if (thisIndex === null) thisIndex = 0;
+
+    function randomSite() {
+      var otherSites = sites.slice();
+      if (thisIndex !== null) otherSites.splice(thisIndex, 1);
+      var randomIndex = Math.floor(Math.random() * otherSites.length);
+      location.href = otherSites[randomIndex];
+    }
+
+    var prevIndex = (thisIndex - 1 < 0) ? sites.length - 1 : thisIndex - 1;
+    var nextIndex = (thisIndex + 1 >= sites.length) ? 0 : thisIndex + 1;
+
+    tag.innerHTML = `
+<div class="badge-group">
+  <div class="badge-ping">
+    <span class="ping-bg"></span>
+    <span class="ping-count">★</span>
+  </div>
+  <div class="badge-button">
+    <div class="badge-inner">
+      <div class="badge-text">
+        <span>${ringName}</span>
+        <span>I love webrings.</span>
+      </div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="${sites[prevIndex]}" style="color:#b389ff; text-decoration:none;">← Previous</a>
+        ${useRandom ? `<a href="javascript:void(0)" onclick="randomSite()" style="color:#b389ff; text-decoration:none;">Random</a>` : ''}
+        ${useIndex ? `<a href="${indexPage}" style="color:#b389ff; text-decoration:none;">Index</a>` : ''}
+        <a href="${sites[nextIndex]}" style="color:#b389ff; text-decoration:none;">Next →</a>
+      </div>
+    </div>
+  </div>
+</div>`;
+  });
+})();
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <img style="height: 64px; filter: none;" src="/new/assets/tcslogo.png"><h1 style="margin: 0px 0px 0px 10px;""><a href="https://callendv.github.io/new" style="text-decoration:none; color: black;">the cheese spot <span style="color: rgba(0, 200, 0, 1);">- massive update to the blog!</span></a></h1>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="column side-column">
+            <h2 style="color: white;">personal stuff</h2>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text">navlink.htm - IE8</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <iframe width="100%" height="100%" style="border:none; border-radius:4px;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text">links.htm - IE8</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <span>links to my other corners on the internet</span>
+                        <ul>
+                            <li><a href="https://prizvideo.github.io/">prizvideo</a></li>
+                            <li><a href="https://cheesedevblog.blogspot.com">my blog</a></li>
+                            <li><a href="https://spacehey.com/hamburgerpancake">my spacehey</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text">navigation.htm - IE8</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <ul>
+                            <li><a href="posts/">blog mirror</a></li>
+                            <li><a href="recipes/">recipe directory</a></li>
+                            <li><a href="fidgets.html">fidget (perfect)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text">WMP Legacy</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <img src="https://files.catbox.moe/oiejde.JPG" style="max-width:100%; width:100%; height:100%; border: 1px solid black;">
+                        <audio loop controls autoplay style="max-width: 100%;" >
+                            <source src="https://frutigeraeroarchive.org/music/wii_u_eshop_menu_track_2.mp3" type="audio/mpeg">
+                            Your browser cannot play the audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text">gstbook.htm - IE8</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <iframe src="https://www3.cbox.ws/box/?boxid=3546896&boxtag=4fAZ2E" style="max-width: 100%; max-height: 100%; width: 100%; height: 100%; border-radius: 4px;"></iframe>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text">hitcounter.htm - IE8</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <script type="text/javascript" src="https://counter.websiteout.com/js/6/14/0/0"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column main-column">
+            <h2>a lot of other sites</h2>
+            <p>wowza bowsa! it's other sites! be kind to them. please.</p>
+            <h3>xfire</h3>
+            <a href="https://www.xf1re.com/profile/hamburgerpancake" target="_blank"><img src="https://www.xf1re.com/miniprofile/hamburgerpancake" style="border:0;" alt="Xf1re Miniprofile" /></a>
+            <br><h3>webrings</h3>
+            <p>note to self: email the owner of every single one of these!</p>
+            <div id='adhdring' style="align-items:center !important">
+                <script type="text/javascript" src="https://skyhold.org/adhd/onionring-variables.js"></script>
+                <script type="text/javascript" src="https://skyhold.org/adhd/onionring-fancywidget.js"></script>
+            </div>
+            <div id="aero-ring" style="min-width:264px !important;min-height:8px !important;">
+                <script src="https://frutigeraeroarchive.org/javascript/aero-webring.js"></script>
+            </div>
+            <div id='dsring'>
+                <script type="text/javascript" src="https://crtstatic.nekoweb.org/dsring/onion/onionring-variables.js"></script>
+                <script type="text/javascript" src="https://crtstatic.nekoweb.org/dsring/onion/onionring-widget.js"></script>
+            </div>
+            <div id='animalcrossingring'>
+                <script type="text/javascript" src="https://housepen.nekoweb.org/ring/onionring-variables.js"></script>
+                <script type="text/javascript" src="https://housepen.nekoweb.org/ring/onionring-widget.js"></script>
+            </div>
+            <div id="billspc" style="align-items:center !important">
+                <script type="text/javascript" src="https://bills-pc.neocities.org/onionring-variables.js"></script>
+                <script type="text/javascript" src="https://bills-pc.neocities.org/onionring-widget.js"></script>
+            </div>
+            <br><iframe src="https://spagwhetti.github.io/embed.html?name=cheesedev" width="100%" height="30rem" style="border: none;"></iframe>
+            <br><br><div id="bonki-ring">
+                <script type="text/javascript" src="https://bonkiscoolsite.neocities.org/bonkiring/bonkiring-widget.js"></script>
+            </div>
+            <br><div style="margin: 0 25% 0 28%; text-align:center"><div style="width: fit-content; border: 2px outset; text-align:center">
+	            <p style="margin: 0; padding: 0.1em; border: 2px inset">This site is a member of Chads.</p>
+	            <div style="margin: 0; padding: 0.1em; border: 2px inset">
+		            <a href="https://webri.ng/webring/chads/random">Random Site</a>
+	            </div>
+            </div></div>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><a href="https://rentryresource.neocities.org/cheesering/">CHEESE RING</a> ] [<a href="https://rentryresource.neocities.org/cheesering/prev.html?id=0"><PREV</a> <a href="https://rentryresource.neocities.org/cheesering/rand.html?id=0">RAND</a> <a href="https://rentryresource.neocities.org/cheesering/list.html?id=0">LIST</a> <a href="https://rentryresource.neocities.org/cheesering/next.html?id=0">NEXT></a></div>
+            <div style="margin: 0 25% 0 25%"><p>
+                <a href="https://join-the-cool.club/members/cheesedev?prev" style="text-decoration: none">⬅️</a>
+                <a href="https://join-the-cool.club/members/cheesedev" style="text-decoration: none">🧊</a>
+                <a href="https://join-the-cool.club/members/cheesedev?next" style="text-decoration: none">➡️</a>
+            </p></div>
+            <div style="margin: 0 25% 0 25%; text-align:center"><div id='christian-webring'>
+                <script type="text/javascript" src="https://christian-webring.nekoweb.org/onionring-variables.js"></script>
+                <script type="text/javascript" src="https://christian-webring.nekoweb.org/onionring-widget.js"></script>
+            </div></div>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><div style="width: fit-content; border: 2px outset; text-align:center">
+	            <p style="margin: 0; padding: 0.1em; border: 2px inset">This site is a member of the cool people.</p>
+	            <div style="margin: 0; padding: 0.1em; border: 2px inset">
+		            <a href="https://webri.ng/webring/coolpeople/random">Random Site</a>
+	            </div>
+            </div></div>
+            <br><div style="text-align: center"><a href="https://cyberworld.cartoon-aa.xyz/prev/cheesedev"><< PREV</a> <a href="https://cyberworld.cartoon-aa.xyz">A CYBER'S WORLD</a> <a href="https://cyberworld.cartoon-aa.xyz/next/cheesedev">NEXT >></a></div>
+            <br><div id='deltaring'>
+                <script type="text/javascript" src="https://ne0nbandit.github.io/deltaring/onionring-variables.js"></script>
+                <script type="text/javascript" src="https://ne0nbandit.github.io/deltaring/onionring-widget.js"></script>
+            </div>
+            <div style="margin: 0 25% 0 25%; text-align:center"><div id="doodlering">
+              <script type="text/javascript" src="https://evehibi.nekoweb.org/doodlering/onionring-variables.js"></script>
+              <script type="text/javascript" src="https://evehibi.nekoweb.org/doodlering/onionring-widget.js"></script>
+            </div></div>
+            <div id="our-favorite-void-club" style="width: 100%; margin: 0 25% 0 25; text-align:center"> <script type="text/javascript" src="https://ourfavoritevoid.club/scripts/onionring/onionring-variables.js"></script> <script type="text/javascript" src="https://ourfavoritevoid.club/scripts/onionring/onionring-widget.js"></script> </div>
+            <div style="display: flex; align-items: center; justify-content: center;"><script defer src="https://femtanyl03.neocities.org/javascript/femtanylwebring.js"></script></div>
+            <div id='ringnote'>
+                <script type="text/javascript" src="https://onionring.neocities.org//onionring-variables.js"></script>
+                <script type="text/javascript" src="https://onionring.neocities.org//onionring-widget.js"></script>
+            </div>
+            <div style="margin: 0 25% 0 15%"><iframe 
+                src="https://maniksharma.xyz/webring-widget.html?site=https://callendv.github.io" 
+                width="360" 
+                height="140" 
+                frameborder="0" 
+                scrolling="no" 
+                style="border:none; overflow:hidden;">
+            </iframe></div>
+            <div style="margin: 0 25% 0 25%; text-align:center"><div id='gfdkris'> 
+                <script type="text/javascript" src="https://fabstarotcorner.neocities.org/webring/onionring-variables.js"></script>
+                <script type="text/javascript" src="https://fabstarotcorner.neocities.org/webring/onionring-widget.js"></script>
+            </div></div>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><script defer src="https://mechagic.party/1stylescripts/gitgudring.js"></script></div>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><a href="https://gradientring.nekoweb.org/s/cheesespot/prev">←</a> <a href="https://gradientring.nekoweb.org/">gradientring</a> <a href="https://gradientring.nekoweb.org/s/cheesespot/next">→</a></div>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><script src="https://homebrew.cresentri.com/webring.js" data="3DS"></script></div>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><div style="width: fit-content; border: 2px outset; text-align:center">
+	            <p style="margin: 0; padding: 0.1em; border: 2px inset">This site is part of the Homestuck Webring.</p>
+	            <div style="margin: 0; padding: 0.1em; border: 2px inset">
+	                <a href="https://webri.ng/webring/hsring/previous">Previous</a>
+		            <a href="https://webri.ng/webring/hsring/random">Random Site</a>
+		            <a href="https://webri.ng/webring/hsring/next">Next</a>
+	            </div>
+            </div></div>
+            <br><div style="margin: 0 25% 0 25%; text-align:center">[ <a href="https://y2kstardust.neocities.org/webring/">hyperfixed ring</a> ]<br>[<a href="https://y2kstardust.neocities.org/webring/prev.html?id=0">&lt;PREV</a> <a href="https://y2kstardust.neocities.org/webring/rand.html?id=0">RAND</a> <a href="https://y2kstardust.neocities.org/webring/list.html?id=0">LIST</a> <a href="https://y2kstardust.neocities.org/webring/next.html?id=0">NEXT&gt;</a> ]</div>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><div id="ilovewebring-widget"></div></div>
+            <br><script defer src="https://the-disorganized-mind-palace.neocities.org/informantring/ring.js"></script>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><svg xmlns='http://www.w3.org/2000/svg' class='iwroot'
+  width='200px' height='75px' viewBox='0 0 200 75'>
+  <style>
+    :root {
+      --shadow: #0e0e0e;
+      --bg-fill:  #100a3b;
+      --ripple-stroke: #19143e;
+      --random-stroke:  #635791;
+      --tube-fill:  #970202;
+      --chain-fill:  #dd8903;
+      --tube-stroke:  #f0c003;
+    }
+    .iwroot {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    .iwroot .shadow {
+      var(--shadow);
+    }
+    .iwroot .buoy {
+      stroke-width: 2;
+      stroke: var(--tube-stroke);
+      fill: var(--tube-fill);
+    }
+    .iwroot .tube {
+      stroke: var(--tube-stroke);
+      fill: var(--tube-fill);
+    }
+    .iwroot a:hover :is(.buoy) {
+      stroke-width: 3;
+    }
+    .iwroot :is(.arrow, .innertube-text) {
+      fill: var(--tube-stroke);
+    }
+  </style>
+  <defs>
+    <rect id='full' x='0' y='0' width='100%' height='100%' />
+    <mask id='shadowmask'>
+      <use href='#full' fill='white' />
+      <path fill='black'
+            d='M 97.98,25.59 C 95.02,26.14 92.80,26.93 90.50,28.97 81.59,36.84 85.36,51.58 97.12,53.97 98.70,54.30 100.42,54.39 102.02,54.14 104.25,53.79 106.18,53.13 108.06,51.86 109.63,50.80 110.94,49.50 111.99,47.93 118.98,37.56 110.34,24.01 97.98,25.59 Z' />
+    </mask>
+    <mask id='tubemask'>
+      <use href='#full' fill='white' />
+      <path fill='black' d='M 97.98,23.25 C 95.02,23.79 92.80,24.59 90.50,26.63 81.59,34.49 85.36,49.23 97.12,51.63 98.70,51.95 100.42,52.04 102.02,51.79 104.25,51.44 106.18,50.78 108.06,49.51 109.63,48.46 110.94,47.15 111.99,45.58 118.98,35.21 110.34,21.66 97.98,23.25 Z' />
+    </mask>
+    <mask id="tubemask-inverted">        
+      <rect x='90' y='30' width='22' height='15' fill='white' />
+    </mask>
+  </defs>
+  
+  <rect x='0' y='0' width='100%' height='100%' fill='var(--bg-fill)' />
+  <path id='next-buoy-shadow' class='shadow'
+        d='M 145.76,24.55 C 139.51,27.03 140.76,32.37 140.76,37.98 140.76,43.35 139.11,53.24 145.14,55.59 146.78,56.23 149.01,56.15 150.76,56.15 150.76,56.15 183.89,56.15 183.89,56.15 186.48,56.14 189.16,56.31 191.31,54.58 193.70,52.65 193.85,50.20 193.89,47.38 193.89,47.38 193.89,32.96 193.89,32.96 193.80,25.99 191.14,24.22 184.51,24.19 184.51,24.19 160.14,24.19 160.14,24.19 156.25,24.19 149.29,23.91 145.76,24.55 145.76,24.55 145.76,24.55 145.76,24.55 Z' />
+  <a href='https://innertu.be/next?from=https://callendv.github.io/new'>
+    <path id='next-buoy' class='buoy'
+          d='M 145.76,22.04 C 139.51,24.53 140.76,29.86 140.76,35.47 140.76,40.85 139.11,50.74 145.14,53.09 146.78,53.72 149.01,53.64 150.76,53.64 150.76,53.64 183.89,53.64 183.89,53.64 186.48,53.64 189.16,53.81 191.31,52.07 193.70,50.14 193.85,47.70 193.89,44.87 193.89,44.87 193.89,30.46 193.89,30.46 193.80,23.49 191.14,21.71 184.51,21.68 184.51,21.68 160.14,21.68 160.14,21.68 156.25,21.68 149.29,21.40 145.76,22.04 145.76,22.04 145.76,22.04 145.76,22.04 Z' />
+    <path id='next-arrow' class='arrow'
+          d='M 149.51,31.08 C 145.76,31.08 145.76,31.08 145.76,34.16 145.76,34.16 145.76,40.65 145.76,40.65 145.76,43.62 145.76,43.62 149.63,43.62 149.63,43.62 176.39,43.62 176.39,43.62 176.39,43.62 176.39,50.11 176.39,50.11 176.39,50.11 190.14,37.35 190.14,37.35 190.14,37.35 176.39,24.93 176.39,24.93 176.39,24.93 176.39,31.08 176.39,31.08 176.39,31.08 149.51,31.08 149.51,31.08 Z' />
+  </a>
+  
+  <path id='prev-buoy-shadow' class='shadow'
+        d='M 51.82,24.46 C 58.08,26.94 56.82,32.28 56.82,37.88 56.82,43.26 58.48,53.15 52.44,55.50 50.80,56.14 48.57,56.06 46.82,56.06 46.82,56.06 13.69,56.06 13.69,56.06 11.11,56.05 8.43,56.22 6.28,54.49 3.89,52.56 3.73,50.11 3.69,47.28 3.69,47.28 3.69,32.87 3.69,32.87 3.78,25.90 6.44,24.13 13.07,24.10 13.07,24.10 37.44,24.10 37.44,24.10 41.34,24.10 48.29,23.82 51.82,24.46 51.82,24.46 51.82,24.46 51.82,24.46 Z' />
+  <a href='https://innertu.be/prev?from=https://callendv.github.io/new'>
+    <path id='prev-buoy' class='buoy'
+          d='M 51.82,21.95 C 58.08,24.44 56.82,29.77 56.82,35.38 56.82,40.75 58.48,50.64 52.44,52.99 50.80,53.63 48.57,53.55 46.82,53.55 46.82,53.55 13.69,53.55 13.69,53.55 11.11,53.55 8.43,53.71 6.28,51.98 3.89,50.05 3.73,47.60 3.69,44.78 3.69,44.78 3.69,30.36 3.69,30.36 3.78,23.40 6.44,21.62 13.07,21.59 13.07,21.59 37.44,21.59 37.44,21.59 41.34,21.59 48.29,21.31 51.82,21.95 51.82,21.95 51.82,21.95 51.82,21.95 Z' />
+    <path id='prev-arrow' class='arrow'
+          d='M 48.07,30.99 C 51.82,30.99 51.82,30.99 51.82,34.07 51.82,34.07 51.82,40.56 51.82,40.56 51.82,43.52 51.82,43.52 47.96,43.52 47.96,43.52 21.19,43.52 21.19,43.52 21.19,43.52 21.19,50.02 21.19,50.02 21.19,50.02 7.44,37.26 7.44,37.26 7.44,37.26 21.19,24.84 21.19,24.84 21.19,24.84 21.19,30.99 21.19,30.99 21.19,30.99 48.07,30.99 48.07,30.99 Z' />
+  </a>
+             
+  <path id='shadow' mask='url(#shadowmask)'
+        d='M 97.98,25.59
+           C 95.02,26.14 92.80,26.93 90.50,28.97
+             81.59,36.84 85.36,51.58 97.12,53.97
+             98.70,54.30 100.42,54.39 102.02,54.14
+             104.25,53.79 106.18,53.13 108.06,51.86
+             109.63,50.80 110.94,49.50 111.99,47.93
+             118.98,37.56 110.34,24.01 97.98,25.59 Z
+           M 67.46,39.86
+           C 62.13,47.35 67.46,62.62 76.67,62.62
+             76.67,72.41 93.09,77.88 100.00,72.41
+             107.20,78.02 123.04,72.41 123.04,62.62
+             132.54,62.62 138.02,47.35 132.54,39.86
+             138.02,32.66 132.54,17.11 123.04,17.11
+             123.04,7.61 107.20,0.98 100.00,7.61
+             93.09,0.98 76.67,7.61 76.67,17.11
+             67.46,17.11 62.13,32.66 67.46,39.86 Z' />
+  <path id='outer rim'
+        class='tube' mask='url(#tubemask)'
+        fill='none' stroke='black' stroke-width='1'
+        d='M 97.98,23.25 C 95.02,23.79 92.80,24.59 90.50,26.63 81.59,34.49 85.36,49.23 97.12,51.63 98.70,51.95 100.42,52.04 102.02,51.79 104.25,51.44 106.18,50.78 108.06,49.51 109.63,48.46 110.94,47.15 111.99,45.58 118.98,35.21 110.34,21.66 97.98,23.25 Z
+           M 67.46,37.52 C 62.13,45.01 67.46,60.27 76.67,60.27 76.67,70.06 93.09,75.54 100.00,70.06 107.20,75.68 123.04,70.06 123.04,60.27 132.54,60.27 138.02,45.01 132.54,37.52 138.02,30.32 132.54,14.77 123.04,14.77 123.04,5.26 107.20,-1.36 100.00,5.26 93.09,-1.36 76.67,5.26 76.67,14.77 67.46,14.77 62.13,30.32 67.46,37.52 Z' />
+  <path id='text-baseline' fill='none' stroke='none'
+        d='M 102.30,19.44 C 106.45,20.18 110.24,21.74 113.17,24.87 121.98,34.30 118.77,49.68 106.62,54.45 104.75,55.19 102.59,55.64 100.58,55.66 97.53,55.70 95.33,55.31 92.51,54.10 90.35,53.17 87.87,51.41 86.35,49.61 78.22,39.94 81.39,25.30 93.38,20.59 95.25,19.85 97.41,19.40 99.42,19.44 99.42,19.44 102.30,19.44 102.30,19.44 Z' />
+  <path id='inner tube' mask='url(#tubemask)' class='tube' stroke-width='1.5'
+        d='M 97.98,23.25 C 95.02,23.79 92.80,24.59 90.50,26.63 81.59,34.49 85.36,49.23 97.12,51.63 98.70,51.95 100.42,52.04 102.02,51.79 104.25,51.44 106.18,50.78 108.06,49.51 109.63,48.46 110.94,47.15 111.99,45.58 118.98,35.21 110.34,21.66 97.98,23.25 Z
+           M 97.12,4.33 C 94.77,4.73 93.42,4.87 91.07,5.54 82.05,8.11 74.63,14.45 70.71,22.98 62.66,40.55 71.41,61.34 89.92,67.43 92.49,68.28 96.15,69.03 98.85,69.06 104.38,69.13 109.38,68.27 114.40,65.82 131.40,57.54 137.69,36.30 128.05,20.10 126.74,17.90 124.85,15.31 123.01,13.53 119.95,10.55 116.08,8.06 112.10,6.51 108.67,5.19 104.54,4.27 100.86,4.33 100.86,4.33 97.12,4.33 97.12,4.33 Z' />
+  <a href='https://innertu.be'>
+    <text class='innertube-text' transform='rotate(212, 100, 37.5)' lengthAdjust='spacing'>
+      <textPath method='stretch' spacing='auto' lengthAdjust='spacing' href='#text-baseline'>
+        INNERTU.BE
+      </textPath>
+    </text>
+  </a>
+
+  <a href='https://innertu.be/random'>
+    <rect id='click-target' x='90' y='30' fill='var(--bg-fill)' width='22' height='15' />
+    <path class='rand-low' fill='none' stroke='var(--random-stroke)' stroke-width='2'
+          d='M 91.00,43.97
+           C 91.00,43.97 100.00,44.00 100.04,39.27
+             100.00,31.00 109.00,32.00 109.00,32.00
+             109.00,32.00 107.00,33.00 107.00,33.00M 109.00,32.00
+           C 109.00,32.00 107.00,31.00 107.00,31.00' />
+    <path class='rand-high-outer' stroke='var(--bg-fill)' stroke-width='3' mask='url(#tubemask-inverted)'
+          d='M 91.00,31.03
+           C 91.00,31.03 100.00,31.00 100.04,35.73
+             100.00,44.00 109.00,43.00 109.00,43.00
+             109.00,43.00 107.00,42.00 107.00,42.00M 109.00,43.00
+           C 109.00,43.00 107.00,44.00 107.00,44.00' />
+    <path class='rand-high-inner' fill='none' stroke='var(--random-stroke)' stroke-width='2'
+          d='M 91.00,31.03
+           C 91.00,31.03 100.00,31.00 100.04,35.73
+             100.00,44.00 109.00,43.00 109.00,43.00
+             109.00,43.00 107.00,42.00 107.00,42.00M 109.00,43.00
+           C 109.00,43.00 107.00,44.00 107.00,44.00' />
+  </a>
+            </svg></div>
+            <br><center><div class="box" style="width:170px; height:130px; background:#FFB6C1; border: 2px dashed #DE3163; box-shadow:5px 5px 5px #953553;">
+                       
+                <center><a href="https://moths-clubhouse.neocities.org/Kirby%20Webring/"><img src='https://moths-clubhouse.neocities.org/Misc%20Graphics/kirbysit.png' style="width:60px; height:60px;"></a></center>
+                <a href='https://moths-clubhouse.neocities.org/Kirby%20Webring/prev'>Prev | </a>
+                <a href='https://moths-clubhouse.neocities.org/Kirby%20Webring/next'>Next</a>
+                <center><a href='https://moths-clubhouse.neocities.org/Kirby%20Webring/rand'>Random</a></center>
+                <center><a href="https://moths-clubhouse.neocities.org/Kirby%20Webring/">The Kirby Webring!</a></center>
+            </div></center>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><object id="melonland-surf-club" data="https://melonland.net/surf-badge.svg?fill=#2bdfff" type="image/svg+xml" style="width: 100px; height: 100px;"></object></div>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><div style="width: fit-content; border: 2px outset; text-align:center">
+	            <p style="margin: 0; padding: 0.1em; border: 2px inset">This site is a member of New Teen ring.</p>
+	            <div style="margin: 0; padding: 0.1em; border: 2px inset">
+		            <a href="https://webri.ng/webring/newteenring/random">Random Site</a>
+	            </div>
+            </div></div>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><map name="win7widget-compact">
+                <area href="https://baccyflap.com/noai" target="_blank" shape="rect" coords="0,0,216,29" alt="no ai webring" title="no ai webring">
+                <area href="https://baccyflap.com/noai/?prv&s=tcs" target="_top" shape="rect" coords="102,45,199,71" alt="previous" title="previous">
+                <area href="https://baccyflap.com/noai/?rnd" target="_top" shape="rect" coords="102,81,199,105" alt="random" title="random">
+                <area href="https://baccyflap.com/noai/?nxt&s=tcs" target="_top" shape="rect" coords="102,116,199,141" alt="next" title="next">
+            </map>
+            <img usemap="#win7widget-compact" src="https://baccyflap.com/noai/win7widget-compact.gif" alt="a Windows 7 style dialog box titled 'The No AI Webring' with a little icon showing a computer chip in a rubbish bin. beside it are three clickable buttons, labeled Previous, Random and Next"></div>
+            <br><div id='NYAN_'>
+                <script type="text/javascript" src="https://epiccity.nekoweb.org/ring/onionring-variables.js"></script>
+                <script type="text/javascript" src="https://epiccity.nekoweb.org/ring/onionring-widget.js"></script>
+            </div>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><div id="oc-webring-widget">
+                <div id="oc-webring-title"><a href="https://tofutush.github.io/oc-webring">OC Webring</a></div>
+                <div id="oc-webring-controls">
+                    <a href="https://tofutush.github.io/oc-webring/prev/?site=thecheesespot">Previous</a>
+                    <a href="https://tofutush.github.io/oc-webring/rand/?site=thecheesespot">Random</a>
+                    <a href="https://tofutush.github.io/oc-webring/next/?site=thecheesespot">Next</a>
+                </div>
+            </div></div>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><map name="onlinewidget">
+                <area href="https://webring.ghostk.id/online/" target="_blank" shape="rect" coords="20,14,167,24" alt="The online webring" title="The online webring">
+                <area href="https://webring.ghostk.id/online/cheesespot/previous" target="_top" shape="rect" coords="7,27,60,36" alt="Previous" title="Previous">
+                <area href="https://webring.ghostk.id/online/random" target="_top" shape="rect" coords="74,27,126,36" alt="Random" title="Random">
+                <area href="https://webring.ghostk.id/online/cheesespot/next" target="_top" shape="rect" coords="139,27,192,36" alt="Next" title="Next">
+            </map>
+            <img usemap="#onlinewidget" src="https://ghostk.id/i/onlineblue.gif" width="200" height="40" style="width:200px;height:40px;max-width:none;image-rendering:pixelated;" alt="A Windows style dialog box titled 'THE ONLINE WEBRING' with three clickable buttons labeled Previous, Random, and Next"></div>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><div style="width: fit-content; border: 0px outset; text-align:center">
+                <p style="margin: 0; padding: 0.1em; border: 0px inset">This site is a member of Outliers.</p>
+                <div style="display: flex">
+                    <br><font size="2"><a style="flex: 1; margin: 0; padding: 0.1em; border: 0px inset" href="https://webri.ng/webring/outliers/previous?via=https%3A%2F%2Fcallendv.github.io%2Fnew%2Fconnectio.html">Previous Site</a>
+                        <a style="flex: 1; margin: 0; padding: 0.1em; border: 0px inset" href="https://webri.ng/webring/outliers/random?via=https%3A%2F%2Fcallendv.github.io%2Fnew%2Fconnectio.html">Random Site</a>
+                        <a style="flex: 1; margin: 0; padding: 0.1em; border: 0px inset" href="https://webri.ng/webring/outliers/next?via=https%3A%2F%2Fcallendv.github.io%2Fnew%2Fconnectio.html">Next Site</a>
+                </font></div><font size="2">
+            </font></div></div>
+            <br><div id='pvz-ring'>
+                <script type="text/javascript" src="https://plantsvszombiez.neocities.org/onionring-variables.js"></script>
+                <script type="text/javascript" src="https://plantsvszombiez.neocities.org/onionring-widget.js"></script>
+                <link rel="stylesheet" href="https://plantsvszombiez.neocities.org/onionring.css">
+            </div>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><script src="https://nippoverse.xyz/retroring/webring.js"></script><ring-063 site="https://callendv.github.io"></ring-063></div>
+            <br><div id='rice-ring'>
+                <script type="text/javascript" src="https://terakun.nekoweb.org/ricepaddy/webring-variables.js"></script>
+                <script type="text/javascript" src="https://terakun.nekoweb.org/ricepaddy/webring-widget.js"></script>
+            </div>
+            <div style="margin: 0 25% 0 25%; text-align:center"><div id="sleepy-dawgs-666">
+                <script type="text/javascript" src="https://sleepydawgs.neocities.org/onionring-variables.js"></script>
+                <script type="text/javascript" src="https://sleepydawgs.neocities.org/onionring-widget.js"></script>
+            </div></div>
+            <br><div id="webring-widget" style="text-align: center; font-family: monospace;">
+                &lt;
+                <a id="prev" href="#" style="color: #ff66aa; text-decoration: none; font-weight: bold;">prev</a> |
+                <a href="https://liquid-sunshine.neocities.org/webring" style="color: #ff66aa; text-decoration: none; font-weight: bold;">Splatoon Webring</a> |
+                <a id="random" href="#" style="color: #ff66aa; text-decoration: none; font-weight: bold;">random</a> |
+                <a id="next" href="#" style="color: #ff66aa; text-decoration: none; font-weight: bold;">next</a>
+                &gt;
+            </div>
+            <script src="https://the-claw-webring-widget.netlify.app/the-claw-webring-widget.mjs" type="module"></script>
+            <br><the-claw-webring-widget theme="light" hideMembers="false" fullWidth="false">
+                <div style="color: inherit; font-family: system-ui; padding: 1rem; font-size: 1rem;">
+                    <div
+                        style="display: grid; gap: 0.5rem 1rem; align-items: center; margin-bottom: 1rem; justify-content: flex-start; grid-template-areas: 'image title' 'image view';"
+                    >
+                        <img
+                            src="https://the-claw-webring.netlify.app/img/theclaw.png"
+                            alt="The Claw Webring"
+                            style="grid-area: image; height: 4rem; transform: rotate(-8deg);"
+                        />
+                        <h2 style="grid-area: title; font-size: 1.4rem; margin: 0;">The Claw Webring</h2>
+                        <a
+                            href="https://github.com/whitep4nth3r/the-claw-webring"
+                            style="grid-area: view; margin: 0; color: inherit;"
+                        >
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </the-claw-webring-widget>
+            <br><div style="margin: 0 25% 0 25%; text-align:center"><map name="badge-wwstamp">
+                <area shape="rect" coords="66,38,79,49" href="https://webmasterwebring.netlify.app?cheesespot-previous" alt="Previous">
+                <area shape="rect" coords="78,29,90,40" href="https://webmasterwebring.netlify.app?cheesespot-next" alt="Next">
+                <area shape="rect" coords="13,15,63,47" href="https://webmasterwebring.netlify.app" alt="Webmaster Webring">
+            </map>
+            <img usemap="#badge-wwstamp" id="ww-stamp" src="https://file.garden/ZrZSgsrYfQXsO7QH/ww/stamp.png" alt="Webmaster Webring" width="99" height="56"></div>
+        </div>
+        <div class="column side-column">
+            
+            <h2 style="color: white;">news/blog posts</h2>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text">blinker.htm - IE8</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Close" disabled></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <p>hey! before you read anything else, just know that i made a few blinkers! or buttons! or whatever they're called. you can see em under this.</p>
+                        <a href="https://callendv.github.io/new"><img src="https://files.catbox.moe/6xnaor.gif"></a> <a href="https://callendv.github.io/new"><img src="https://files.catbox.moe/ucksl6.gif"></a>
+                        <p>and here's how to put em into your website:</p>
+                        <textarea style="width:95%;height:75px;min-width:95% !important;" disabled content-type="text">
+<a href="https://callendv.github.io/new"><img src="https://files.catbox.moe/6xnaor.gif"></a>
+
+<a href="https://callendv.github.io/new"><img src="https://files.catbox.moe/ucksl6.gif"></a>
+                        </textarea>
+                        <hr>
+                        <p>okay, you may now carry on.</p>
+                    </div>
+                </div>
+            </div>
+            <p style="color: white;">note: (almost) everything here, excluding QOTD amd the portfolio updates, is pulled directly from my dedicated blog site, the <a href="https://cheesedevblog.blogspot.com">cheeseblog</a>.</p>
+            <hr>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text"><b>qotd</b> for 5/28/25</div>
+                    </div>
+                    <div class="window-body has-space">
+                        <p>woohoo! time for question of the day. play it by pressing the link below. <br><br><a href="#qotd2"><button>play the qotd</button></a></p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text"><b>qotd</b> for 5/27/25</div>
+                    </div>
+                    <div class="window-body has-space">
+                        <p>woohoo! time for question of the day. play it by pressing the link below. <br><br><a href="#qotd1"><button>play the qotd</button></a></p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text"><b>hacking switch gameshare</b> - 5/07/25</div>
+                    </div>
+                    <div class="window-body has-space">
+                        <p>hi everyone!! this is gonna be very rushed because i just got the idea fresh on my mind and i don't have the time to write a full blog posts, but i swear... <br><br>read the full post <a href="posts/25/5/hacking-switch-gameshare.html">here</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text"><b>worldcoin sol... didn't exist</b> - 5/01/25</div>
+                    </div>
+                    <div class="window-body has-space">
+                        <p>you ever hear about a company so convinced of its own importance that it builds an entire multi-million dollar project just to "solve" a problem it basically... <br><br>read the full post <a href="posts/25/5/worldcoin-solves-a.html">here</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p style="color: white;">view all previous blog posts <a href="./posts">here</a>.</p>
+        </div>
+    </div>
+</body>
+</html>
