@@ -3,201 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>the cheese spot</title>
     <link rel="stylesheet" href="https://unpkg.com/7.css/dist/7.scoped.css">
     <link rel="icon" type="image/icon" href="/new/assets/notext-tcslogo.png">
+    <link rel="stylesheet" href="https://dsring.neocities.org/dswidget/onionring.css">
+    <title>welcome to tcs</title>
     <style>
-        :root {
-            --primary-color: #1e90ff;
-            --background-color: #0a192f;
-            --text-color: #e6f1ff;
-            --card-background: rgba(255, 255, 255, 0.1);
-            --glass-edge: rgba(255, 255, 255, 0.5);
-        }
-
         body {
-            font-family: 'Segoe UI', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #0a192f, #172a45);
-            color: var(--text-color);
-            min-height: 100vh;
+            background-image: url("https://wallpapercave.com/wp/wp14251242.jpg");
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        .navbar {
+            background: linear-gradient(to bottom, #fdfeff 0%, #f5f9fc 50%, #e7eef5 100%);
+            border-bottom: 1px solid #b3b3b3;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2em;
-        }
-
-        header {
-            background: linear-gradient(135deg, #1e90ff, #00bfff);
-            color: white;
-            padding: 2em 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(30, 144, 255, 0.5);
-        }
-
-        header::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
-            transform: rotate(30deg);
-        }
-
-        h1 {
-            font-size: 2.5em;
-            font-weight: 300;
-            margin: 0;
-            position: relative;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        }
-
-        nav {
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 1em 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
             display: flex;
-            justify-content: center;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
         }
 
-        nav ul li {
-            margin: 0 1em;
+        .column {
+            background: linear-gradient(to bottom, #ffffff 0%, #f7f7f7 100%);
+            border: 1px solid #d1d1d1;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 15px;
         }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 400;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
-            padding: 0.5em 1em;
-            border-radius: 20px;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+        .side-column {
+            flex: 1;
+            margin: 0px 9px 0px 9px;
+            background-image: url("https://wallpaperaccess.com/full/9368870.png");
+            background-attachment: fixed;
         }
 
-        nav ul li a:hover {
-            color: #e0e0e0;
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-            background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+        .main-column {
+            flex: 2;
         }
 
-        .card {
-            background-color: var(--card-background);
-            border-radius: 15px;
-            padding: 2em;
-            margin-bottom: 2em;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
-                        0 0 0 1px var(--glass-edge),
-                        inset 0 0 0 1px var(--glass-edge),
-                        inset 0 0 20px rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 
-                        0 0 0 1px var(--glass-edge),
-                        inset 0 0 0 1px var(--glass-edge),
-                        inset 0 0 30px rgba(255, 255, 255, 0.07);
-        }
-
-        h2 {
-            color: var(--primary-color);
-            font-weight: 600;
-            text-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
-        }
-
-        .project {
-            margin-bottom: 2em;
-            padding: 1em;
-            background: linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+        #aero-ring {
+            background: linear-gradient(to bottom, #0af 0%, #07c 100%);
             border-radius: 10px;
-            transition: background 0.3s ease;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.5),
+            inset 0 2px 1px rgba(255, 255, 255, 0.15),
+            inset 0 -2px 1px rgba(0, 0, 0, 0.35);
+            font-family: sans-serif;
+            margin: 10px auto 0px auto;
+            max-width: 15rem;
+            padding: 0.75rem;
         }
 
-        .project:hover {
-            background: linear-gradient(to bottom right, rgba(255,255,255,0.15), rgba(255,255,255,0.07));
+        #aero-ring a,
+        #aero-ring a:visited {
+            color: white !important;
         }
 
-        .project h3 {
-            color: var(--primary-color);
-        }
-
-        .project-links a {
-            color: var(--primary-color);
-            text-decoration: none;
-            margin-right: 1em;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
-            padding: 0.3em 0.8em;
-            border-radius: 15px;
-            background: linear-gradient(to bottom, rgba(30,144,255,0.2), rgba(30,144,255,0.1));
-        }
-
-        .project-links a:hover {
-            color: #ffffff;
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-            background: linear-gradient(to bottom, rgba(30,144,255,0.3), rgba(30,144,255,0.2));
-        }
-
-        .icon {
-            color: var(--primary-color);
-            margin-right: 0.5em;
-            text-shadow: 0 0 3px rgba(30, 144, 255, 0.5);
-        }
-
-        footer {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1em;
-            }
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav ul li {
-                margin: 0.5em 0;
-            }
+        #aero-ring a:focus,
+        #aero-ring a:hover,
+        #aero-ring a:active {
+            color: lightgrey !important;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>the cheese spot</h1>
-    </header>
-
-    
+    <nav class="navbar">
+        <div class="navbar-content">
+            <img style="height: 64px; filter: none;" src="/new/assets/tcslogo.png"><h1 style="margin: 0px 0px 0px 10px;""><a href="https://callendv.github.io/new" style="text-decoration:none; color: black;">the cheese spot  <span style="color: rgba(0, 150, 175, 1);">- happy new year!</span></a></h1>
+        </div>
+    </nav>
 
     <div class="container">
-        <section class="card">
-            <h1>wait a second.</h1>
+        <div class="column main-column">
+            <h2>wait a second.</h2>
             <p>this website was designed for very specific conditions. ideally, a 1080p firefox esr window running on windows 7. but most people don't have that specific setup. so, instead, i'll warn you: if you're on mobile, or using a screen below 768p, this website will not look good unless you use something like 80% zoom and desktop mode. tablets should load the website fine.</p>
-            <p>anyways, if you're ready to continue, click <a href="/new" style="color:white;">here</a>. otherwise, go back.</p>
-        </section>
+            <p>anyways, if you're ready to continue, click <a href="/new/">here</a>. otherwise, go back.</p>
+            <br>
+            <div class="win7" style="max-width:415px; margin:auto;">
+                <div class="window active">
+                    <div class="title-bar">
+                        <div class="title-bar-text">advertisement.htm - IE8</div>
+                        <div class="title-bar-controls"></div>
+                    </div>
+                    <div class="window-body has-space">
+                        <img src="/new/assets/advert1.png" style="max-width:100% !important;">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
