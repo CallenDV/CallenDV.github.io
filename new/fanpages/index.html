@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/7.css/dist/7.scoped.css">
     <link rel="icon" type="image/icon" href="/new/assets/notext-tcslogo.png">
-    <title>blog - tcs</title>
+    <link rel="stylesheet" href="https://dsring.neocities.org/dswidget/onionring.css">
+    <title>welcome to tcs</title>
     <style>
         body {
             margin: 0;
@@ -50,13 +51,35 @@
         .side-column {
             flex: 1;
             margin: 0px 9px 0px 9px;
-            max-width: 20%;
             background-image: url("https://wallpaperaccess.com/full/9368870.png");
             background-attachment: fixed;
         }
 
         .main-column {
             flex: 2;
+        }
+
+        #aero-ring {
+            background: linear-gradient(to bottom, #0af 0%, #07c 100%);
+            border-radius: 10px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.5),
+            inset 0 2px 1px rgba(255, 255, 255, 0.15),
+            inset 0 -2px 1px rgba(0, 0, 0, 0.35);
+            font-family: sans-serif;
+            margin: 10px auto 0px auto;
+            max-width: 15rem;
+            padding: 0.75rem;
+        }
+
+        #aero-ring a,
+        #aero-ring a:visited {
+            color: white !important;
+        }
+
+        #aero-ring a:focus,
+        #aero-ring a:hover,
+        #aero-ring a:active {
+            color: lightgrey !important;
         }
     </style>
 </head>
@@ -68,23 +91,7 @@
     </nav>
 
     <div class="container">
-        <div class="column side-column">
-            <div class="win7">
-                <div class="window active" style="max-width: 300px">
-                    <div class="title-bar">
-                        <div class="title-bar-text">takemehome.htm - IE8</div>
-                        <div class="title-bar-controls">
-                            <button aria-label="Close"></button>
-                        </div>
-                    </div>
-                    <div class="window-body has-space">
-                        <span>click the button below to go to the home page.</span>
-                        <br>
-                        <br>
-                        <a href="https://www.thecheesespot.xyz/new"><button>take me home!</button></a>
-                    </div>
-                </div>
-            </div>
+        <div class="column side-column" style="max-width:270px !important;">
             <h2 style="color: white;">personal stuff</h2>
             <div class="win7">
                 <div class="window active" style="max-width: 300px">
@@ -111,10 +118,28 @@
                     <div class="window-body has-space">
                         <span>links to my other corners on the internet</span>
                         <ul>
-                            <li><a href="https://prizvideo.github.io/PrizVdeo-Main">prizvideo (main)</a></li>
-                            <li><a href="https://prizvideo.github.io/PrizVdeo-Test">prizvideo (test)</a></li>
+                            <li><a href="https://prizvideo.github.io/">prizvideo</a></li>
                             <li><a href="https://cheesedevblog.blogspot.com">my blog</a></li>
-                            <li><a href="https://spacehey.com/cheesedev">my spacehey</a></li>
+                            <li><a href="https://spacehey.com/hamburgerpancake">my spacehey</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text">navigation.htm - IE8</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <ul>
+                            <li><a href="posts/">blog mirror</a></li>
+                            <li><a href="recipes/">recipe directory</a></li>
+                            <li><a href="fidgets.html">fidget (perfect)</a></li>
+                            <li><a href="connectio.html">links outta here</a></li>
                         </ul>
                     </div>
                 </div>
@@ -130,8 +155,8 @@
                     </div>
                     <div class="window-body has-space">
                         <img src="https://files.catbox.moe/oiejde.JPG" style="max-width:100%; width:100%; height:100%; border: 1px solid black;">
-                        <audio loop controls style="max-width: 100%;">
-                            <source src="https://frutigeraeroarchive.org/music/playstation_home_mall.mp3" type="audio/mpeg">
+                        <audio loop controls autoplay style="max-width: 100%;" >
+                            <source src="https://frutigeraeroarchive.org/music/wii_u_eshop_menu_track_2.mp3" type="audio/mpeg">
                             Your browser cannot play the audio.
                         </audio>
                     </div>
@@ -167,19 +192,32 @@
             </div>
         </div>
         <div class="column main-column">
-            <h2>blog post: massive prizvideo update! - 1/04/2025</h2>
-            <p>i know that despite what i said in my original post, this blog hasn’t really been a place for updates on prizvideo. but guess what? this entire post is about it! let’s dive head first into this topic.</p>
-            <h2>recap/what is prizvideo?</h2>
-            <p>if you somehow stumbled upon this blog without knowledge of prizvideo, here’s the summary: prizvideo is an open-source, ad-free, privacy based video broadcasting platform. it aims to have a user-centered experience. that means none of the annoyances, such as ads or annoying popups. however, it aims to do more than that. it also promises for there to be no third party trackers or selling your data. the data is does collect is only used for your feed and a rough estimate of popular topics or the amount of users on prizvideo. did i mention it is open source? you can find the github and website links here:</p>
-            <p><a href="https://github.com/PrizVideo">https://github.com/PrizVideo</a></p>
-            <p><a href="https://prizvideo.github.io/">https://prizvideo.github.io/</a></p>
-            <p>okay, now lets talk about what i actually mean to talk about.</p>
-            <h2>what is this so called "massive update"?</h2>
-            <p>okay, maybe it isn’t a massive update, maybe i was just using that wording for people to read my newest blog post (although you are welcome to read my older ones by all means, i preserve the content i make). the new update features even more enhanced security, various bug fixes, and now, persistent logins! i know it doesn’t seem like a lot, but everything here is a step in a journey, and i want everyone reading this to be a step in that journey.</p>
-            <h2>and why should i care?</h2>
-            <p>i believe that anyone who reads my blog is either someone i know or i work with, someone related to me, somebody i shared the link to, or the most unlikely one, someone who found my blog through a search engine. and do you want to know why i doubt that? i doubt that because i have tried to find my blog through google, brave search, duckduckgo, even yahoo, but it was to no avail. anyways, backstory aside, i hope you enjoyed this blog post, comment if you like blogs more centered around this style, and make sure to tune in to the cheeseblog for another post. cya!</p>
-            <br>
-            <div class="win7"><div role="tooltip">comments are not available here. to add a comment on this blog post, click <a href="https://cheesedevblog.blogspot.com/2025/05/hacking-switch-gameshare.html">here</a>.</div></div>
+            <h2>fanpage directory</h2>
+            <p>im not dealing with the image bullshit of the recipes all over again so this is just gonna be a plain list of links to the pages. sorry.</p>
+            <hr><h3>nintendo</h3>
+            <ul>
+                <li><a href="nintendo/mario.html">super mario bros</a></li>
+                <li><a href="nintendo/mariokart.html">mario kart</a></li>
+                <li><a href="nintendo/splatoon.html">splatoon</a></li>
+                <li><a href="nintendo/pokemon.html">pokemon</a></li>
+                <li><a href="nintendo/animalcrossing.html">animal crossing</a></li>
+                <li><a href="nintendo/tomodachilife.html">tomodachi life</a></li>
+            </ul>
+            <h3>food</h3>
+            <ul>
+                <li><a href="food/cheese.html">cheese</a></li>
+                <li><a href="food/drpepper.html">dr pepper</a></li>
+                <li><a href="food/alfredo.html">alfredo</a></li>
+                <li><a href="food/lomein.html">lo mein</a></li>
+                <li><a href="food/milk.html">milk</a></li>
+                <li><a href="food/water.html">water</a></li>
+            </ul>
+            <h3>technology</h3>
+            <ul>
+                <li><a href="technology/phone.html">phone</a></li>
+                <li><a href="technology/computer.html">computer</a></li>
+                <li><a href="technology/keyboard.html">keyboard</a></li>
+            </ul>
         </div>
     </div>
 </body>
