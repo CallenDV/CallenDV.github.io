@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://unpkg.com/7.css/dist/7.scoped.css">
     <link rel="icon" type="image/icon" href="/new/assets/notext-tcslogo.png">
     <link rel="stylesheet" href="https://dsring.neocities.org/dswidget/onionring.css">
-    <title>welcome to tcs</title>
+    <title>about me - tcs</title>
     <style>
         body {
             margin: 0;
@@ -80,6 +80,42 @@
         #aero-ring a:hover,
         #aero-ring a:active {
             color: lightgrey !important;
+        }
+
+        .albumCover img {
+            max-width: 196px;
+            max-height: 196px;
+            margin: 5px;
+            
+            border-radius: 2px;
+            filter: drop-shadow(0 2px 6px #66a);
+
+            transition: transform 0.8s ease-in-out;
+            transform: translateX(0) rotate3d(0,0,0,0);
+            position: relative;
+            z-index: 400;
+        }
+
+        .albumCover .text {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            z-index: 2;
+
+            background-image: linear-gradient(to right, #ddf, transparent);
+            padding: 0 0 0 5px;
+            min-height: 196px;
+        }
+
+        .albumCover:hover img {
+            transform: translateX(400px) rotate3d(0,1,0, -35deg);
+        }
+
+        .albumCover:hover .text {
+            opacity: 1;
         }
     </style>
 </head>
@@ -192,133 +228,87 @@
             </div>
         </div>
         <div class="column main-column">
-            <h2>ello. i make things.</h2>
-            <img src="https://elevator-to-the-moon.neocities.org/vista_pic.jpg" style="max-width:550px; border: 1px solid black; border-radius: 5px; box-shadow: 3px 3px 5px #42424d">
-            <br>
-            <br>
-            <div class="win7">
-                <div role="tooltip">credit for image: <a href="https://elevator-to-the-moon.neocities.org">the elevator to the moon</a></div>
-            </div>
-            <p>this is my corner of the internet. say cheese!</p>
-            <h3>about me</h3>
-            <p>i'm a passionate developer with a love for coding, art, photography, and more. my journey started with curiosity and has led me to explore various programming languages and creative pursuits.</p>
-            <div class="win7">
-                <details open style="margin: 0px 0px 0px 13px;">
-                    <summary>my skills and interests</summary>
-                    <ul>
-                        <li>coding html, css, js, node.JS, Scratch, markdown, batch, and more</li>
-                        <li>drawing physical and digital art, especially scenery</li>
-                        <li>learning game development</li>
-                        <li>editing videos and photos</li>
-                        <li>photography</li>
-                    </ul>
-                </details>
-            </div>
-            <p>if you're looking for something more extensive, <a href="/new/about.html">check this out</a>.</p>
-            <h3>my projects!</h3>
-            <p>these are my projects. do you like them?</p>
-            <hr>
-            <div class="win7">
-                <div class="window active" style="max-width: 300px">
+            <h2>about me</h2>
+            <p>hi! i'm cheese. well, not really, but that is what you'll know me by. first and foremost: i am a minor. please do not send any 18+ media to me, or tag me in it elsewhere online. i will interact with 18+ accounts and people, i just don't want your stuff. anyways, i'm a teenager from louisiana, virgo (if that matters), and a guy. i also am a progressive christian, so please try to respect me and my beliefs. thanks. anyways, lets get to</p>
+            <h3>my hobbies</h3>
+            <p>i have a lot. like, a lot. also, ew, i don't like how much i'm using "i". feels narcissistic.</p>
+            <p>well, there's one obvious one, and it is the reason why you're here right now. one of my favorite hobbies is web development, and just programming in general. i started a few years ago, my earliest project tracing to roughly 2021. it functions as a great outlet for my energy and thoughts. if you want to get into web development, i highly recommend <a href="https://w3schools.com">w3schools</a> and <a href="https://developer.mozilla.org/en-US/docs/">mdn dev docs</a>.</p>
+            <p>a newer development has been my love of photography. i have always liked taking pictures of landscapes and just wherever i happened to be, but i never took it seriously until my parents gifted me a nikon d3000 about 2 years ago. since then, practically every major trip i've been on, my d3000 has been with me. if you have any tips for me or need some, i'll gladly give. also, speaking of photography, sometime eventually i'll add a section to this website where my pictures can be seen. guess i'll never be satisfied with this website.</p>
+            <p>i don't really show it on this website, but i adore art. not really painting or anything like that, just specifically pencil/monochrome sketches. if you couldn't get a hint from my photography section literally right above this, i typically only draw landscapes, sometimes animals. not really that ood with drawing people, but i have been studying anatomy in an attempt to get better. maybe just like my photos, i'll put some of my silly little doodles on here. anyways, i think my shading is pretty good? maybe? dunno.</p>
+            <p>i also play games fairly often. mostly "older" nintendo stuff, such as splatoon 1, super mario 3d world, or tomodachi life. i don't play these emulated, i always use my actual wii u and 2ds xl, unless it is like an actually old game where i don't have the console, such as smb3 or kid icarus. i still play more modern games, but you'll usually only find me on my 2ds xl or wii u, not really my switch 2. of course, i do also play pc games, such as fallout 3 and ms flight sim.</p>
+            <p>also, it isn't really a hobby, but don't forget to go on walks, go biking, really anything outside! you never notice just how nice and peaceful nature is until you're there to see it.</p>
+            <h3>pets</h3>
+            <p>i have three rabbits. they are all very sweet, and i love them very much. they can get petty, though. here's a picture of them.</p>
+            <div class="win7" style="max-width:460px; max-height:400px; margin:auto;">
+                <div class="window active">
                     <div class="title-bar">
-                        <div class="title-bar-text">highlighted project - prizvideo</div>
-                        <div class="title-bar-controls">
-                            <button aria-label="Minimize"></button>
-                            <button aria-label="Maximize"></button>
-                            <button aria-label="Close"></button>
-                        </div>
+                        <div class="title-bar-text">bunnies.png - IE8</div>
+                        <div class="title-bar-controls"></div>
                     </div>
                     <div class="window-body has-space">
-                        <menu role="tablist" aria-label="Window with Tabs">
-                            <button role="tab" aria-controls="desc" aria-selected="true">description</button>
-                            <button role="tab" aria-controls="stat">status</button>
-                        </menu>
-                        <article role="tabpanel" id="desc">
-                            <b>prizvideo</b>
-                            <p>an ad-free and open source video broadcasting platform focused on privacy.</p>
-                        </article>
-                        <article role="tabpanel" id="stat" hidden>
-                            <b>PrizVideo</b>
-                            <p>an ad-free and open source video broadcasting platform focused on privacy.</p>
-                        </article>
-                        <section class="field-row" style="justify-content: flex-end">
-                            <a style="text-decoration:none; color: black;" href="https://prizvideo.github.io"><button class="default">visit the site</button></a>
-                            <a style="text-decoration:none; color: black;" href="https://github.com/PrizVideo"><button>source code</button></a>
-                        </section>
+                        <img src="https://files.catbox.moe/cy6exh.jpg" style="max-width:100% !important;">
+                        <p style="font-size: small !important;">[left to right] carmel, a female 6 year old rex rabbit, and twilight, a male 6 year old dwarfed flemish giant</p>
                     </div>
                 </div>
             </div>
-            <br><br>
-            <div class="win7">
-                <div class="window active" style="max-width: 300px">
-                    <div class="title-bar">
-                        <div class="title-bar-text">highlighted project - cheeseos</div>
-                        <div class="title-bar-controls">
-                            <button aria-label="Minimize"></button>
-                            <button aria-label="Maximize"></button>
-                            <button aria-label="Close"></button>
-                        </div>
-                    </div>
-                    <div class="window-body has-space">
-                        <menu role="tablist" aria-label="Window with Tabs">
-                            <button role="tab" aria-controls="desc" aria-selected="true">description</button>
-                            <button role="tab" aria-controls="stat">status</button>
-                        </menu>
-                        <article role="tabpanel" id="desc">
-                            <b>cheeseos</b>
-                            <p>a multifunction operating system built with assembly.</p>
-                        </article>
-                        <article role="tabpanel" id="stat" hidden>
-                            <b>PrizVideo</b>
-                            <p>a multifunction operating system built with assembly.</p>
-                        </article>
-                        <section class="field-row" style="justify-content: flex-end">
-                            <a style="text-decoration:none; color: black;" href="https://github.com/CallenDV/CheeseOS"><button>source code</button></a>
-                        </section>
+            <p>my third rabbit isn't in this picture (i can still tell you some of his traits: albino flop ear, 8 years old, male, had an ear infection at some point but he's all good now). and no, twilight isn't dead. he's just flopped sound asleep. anyways, i don't exactly remember where we got them, just that the shelter (i think it was a shelter anyways) has closed down. me and my family got both of them when they were roughly around 2 weeks old. they have a very strong bond, practically inseperable as far as i can see. they are terrified of my dad for some reason, though.</p>
+            <p>i used to have a dog, named nihm. unfortunately, she passed away around late 2020 and i do not have any pictures of her on my phone or camera to show. rest in peace, girly. although, i do recall some details about her. she was wild, not bred, and had various white and french fry orange patches around her body. she was somewhat skinny, not really but not exactly normally sized.</p>
+            <p>also, i wouldn't really consider this a pet, but at my school i do take care of a pretty large fish tank with turtles, goldfish, crabs, the sort. the turtle is a very silly one that sometimes will swim up to be and bump its head on the glass.</p>
+            <h3>music</h3>
+            <p>most of the music i listen to is usually lofi, jazz, or video game music. typically nintendo. almost all of these can be found on <a href="https://downloads.khinsider.com/?u=3254499">a little website i found</a> (do note that the link i gave you has a referral that allows me to download more albums, if you do not want to, that's totally fine. here's the non-referral link: <a href="https://downloads.khinsider.com/">khinsider vgm</a>). here's a little 3d album thing i made please like it</p>
+            <div style="min-width: 100%; background-image: linear-gradient(#ccf, #88c); border: 2px #55f solid;" >
+                <div class="albumCover" style="perspective: 1000px; position: relative;">
+                    <img src="https://files.catbox.moe/h1fhsb.jpeg">
+                    <div class="text" style="max-width: 375px;">
+                        <h3>animal crossing: new leaf ost</h3>
+                        <p>it's really good. as you would expect, very peaceful and relaxed. great for listening when studying or doing work of any kind. highly recommend.</p>
                     </div>
                 </div>
-            </div><br>
-            <hr>
-            <p>i'm gonna be honest, i'm too lazy to put them all here so just go to <a href="https://github.com/CallenDV">my github page</a> to see them all.</p>
-            <h3>wanna contact me?</h3>
-            <p>fine. do so with any of these:</p>
-            <ul>
-                <li><a href="mailto:callendv1889@gmail.com">callenddv1889@gmail.com</a></li>
-                <li>github: <a href="https://www.github.com/CallenDV">@CallenDV</a> (i guess you can like go to one of my old repositories and leave something in the discussion?)</li>
-                <li>youtube: <a href="https://www.youtube.com/@cheesedev1">@cheesedev1</a></li>
-                <li>scratch: <a href="https://scratch.mit.edu/users/callendv">@callendv</a> (make a comment on my profile)</li>
-                <li>escargot: hamburgerpancake@escargot.chat</li>
-                <li>NINA.chat: hamburgerpancake</li>
-                <li>nope.chat: @cheesedev:nope.chat</li>
-            </ul>
-            <hr>
-            <h3>ready to go already?</h3>
-            <iframe src="sandwich.html" style="width:100%;height:100px;border:none;scrollbar-width:none !important;overflow:hidden !important;"></iframe>
+                <div class="albumCover" style="perspective: 1000px; position: relative;">
+                    <img src="https://files.catbox.moe/twb6w1.jpg">
+                    <div class="text" style="max-width: 375px;">
+                        <h3>femtanyl's reactor album</h3>
+                        <p>one of my favorites. very high paced and energetic. my personal favorite from the album is dinner!</p>
+                    </div>
+                </div>
+                <div class="albumCover" style="perspective: 1000px; position: relative;">
+                    <img src="https://files.catbox.moe/tgiuq2.svg">
+                    <div class="text" style="max-width: 375px;">
+                        <h3>undertale ost</h3>
+                        <p>a cult classic. practically everyone knows it already, but it is still worth it to listen to nontheless.</p>
+                    </div>
+                </div>
+                <div class="albumCover" style="perspective: 1000px; position: relative;">
+                    <img src="https://files.catbox.moe/u5splm">
+                    <div class="text" style="max-width: 375px;">
+                        <h3>splatune</h3>
+                        <p>yet another great one. fast, full of energy, and strangely optimistic. absolutely love the entire thing, probably my most favorite album oat! don't just get the soundtrack, get the game too. calling it fantastic is an understatement, there are no words for how good i think this game and soundtrack are.</p>
+                    </div>
+                </div>
+                <div class="albumCover" style="perspective: 1000px; position: relative;">
+                    <img src="https://files.catbox.moe/bfr7yi.jpg">
+                    <div class="text" style="max-width: 375px;">
+                        <h3>super mario galaxy ost</h3>
+                        <p>this one is very good. the soundtrack being orchestrated was definitely the right choice, it fits the whole "grand"-ness of the game perfectly, and i'm all here for that. that aside, the soundtrack is still just excellent, and has a sense of variety to it that i think other mario games just don't hit as well.</p>
+                    </div>
+                </div><br>
+            </div>
+            <h3>quizzes</h3>
+            <p>had a lot of fun doing these. if you go to any of these websites, (except maybe the first one) remember to turn on your ad blocker, at least. i have no control over the nasty ads and telemetry they may serve, so what you see is totally in your hands.</p>
+            <a href="http://dokodemo.neocities.org/gamelounge/splatidol.html"><img src="http://dokodemo.neocities.org/gamelounge/splatoon/marie.png" alt="Marie" title="You're most like Marie from the Squid Sisters!"></a><br>
+            <a href="https://play.nintendo.com/activities/personality-quizzes/mushroom-kingdom-class-seating-personality-quiz/"><img src="https://files.catbox.moe/v91999.png" title="You are.. Rosalina!" style="max-width: 256px; border: 3px orange solid; margin:2px;"></a>
+            <a href="https://kids.nationalgeographic.com/games/personality-quizzes/article/discover-which-famous-prank-you-would-pull"><img src="https://files.catbox.moe/m3hqkv.PNG" title="You'd tell people spaghetti grows on trees!" style="max-width: 496px; border: 3px red solid; margin:2px;"></a>
+            <a href="https://uquiz.com/Result/static/lite/4wRRHR/142201/personality/190898"><img src="https://files.catbox.moe/s7o70f.png" title="You're Asgore!" style="max-width: 256px; border: 3px lightskyblue solid; margin:2px;"></a>
+            <p>unfortunately, the only one that actually came with an image element i could embed was the splatoon quiz. quite annoying, but it is whatever.</p>
             <br>
-            <div style="display:flex;">
-                <div id="aero-ring" style="min-width:264px !important;min-height:8px !important;">
-                    <script src="https://frutigeraeroarchive.org/javascript/aero-webring.js"></script>
-                </div>
-                <div style="max-width: 275px !important; max-height: 75px !important;">
-                    <div id='dsring'>
-                        <script type="text/javascript" src="https://dsring.neocities.org/dswidget/onionring-variables.js"></script>
-                        <script type="text/javascript" src="https://dsring.neocities.org/dswidget/onionring-widget.js"></script>
-                    </div>
-                </div>
-            </div>
-            <div id='gfdkris'> 
-                <script type="text/javascript" src="https://fabstarotcorner.neocities.org/webring/onionring-variables.js"></script>
-                <script type="text/javascript" src="https://fabstarotcorner.neocities.org/webring/onionring-widget.js"></script>
-            </div>
-            <br>
-            <div class="win7">
+            <div class="win7" style="max-width:460px; margin:auto;">
                 <div class="window active">
                     <div class="title-bar">
                         <div class="title-bar-text">advertisement.htm - IE8</div>
                         <div class="title-bar-controls"></div>
                     </div>
                     <div class="window-body has-space">
-                        <img src="https://files.catbox.moe/ts4ts5" style="max-width:100% !important;">
+                        <img src="https://files.catbox.moe/yiurdp.jpg" style="max-width:100% !important;">
                     </div>
                 </div>
             </div>
@@ -397,108 +387,5 @@
             <p style="color: white;">view all previous blog posts <a href="./posts">here</a>.</p>
         </div>
     </div>
-    
-    <div class="win7"><div class="window active is-bright" id="qotd1" role="dialog" aria-labelledby="dialog-title">
-        <div class="title-bar">
-            <div class="title-bar-text" id="dialog-title">qotd for 5/27/25</div>
-            <div class="title-bar-controls">
-                <button aria-label="Close" onclick="history.back()"></button>
-            </div>
-        </div>
-        <div class="window-body has-space">
-<fieldset>
-  <div class="field-row">what is a razorfish's favorite hiding place?</div>
-  <div class="field-row">
-    <input id="sc1" type="radio" name="choice1" value="in a sea cave">
-    <label for="sc1">in a sea cave</label>
-  </div>
-  <div class="field-row">
-    <input id="kf1" type="radio" name="choice1" value="in a kept forest">
-    <label for="kf1">in a kept forest</label>
-  </div>
-  <div class="field-row">
-    <input id="us1" type="radio" name="choice1" value="among sea urchin spines">
-    <label for="us1">among sea urchin spines</label>
-  </div>
-</fieldset>
-        </div>
-        <footer style="text-align: right">
-            <button onclick="submitAnswer1()">submit answer</button>
-            <button onclick="history.back()">cancel</button>
-        </footer>
-        <script>
-var submitAnswer1 = function() {
-
-  var radios = document.getElementsByName('choice1');
-  var val= "";
-  for (var i = 0, length = radios.length; i < length; i++) {
-      if (radios[i].checked) {
-         val = radios[i].value; 
-         break;
-       }
-  }
-  
-  if (val == "" ) {
-    alert('please select an answer.');
-  } else if ( val == "among sea urchin spines" ) {
-    alert('you are correct!');
-    history.back();
-  } else {
-    alert('unfortunately, you are wrong. try again!');
-  }
-};
-        </script>
-    </div></div>
-    <div class="win7"><div class="window active is-bright" id="qotd2" role="dialog" aria-labelledby="dialog-title">
-        <div class="title-bar">
-            <div class="title-bar-text" id="dialog-title">qotd for 5/28/25</div>
-            <div class="title-bar-controls">
-                <button aria-label="Close" onclick="history.back()"></button>
-            </div>
-        </div>
-        <div class="window-body has-space">
-<fieldset>
-  <div class="field-row">which mammal is the only one capable of sustained, powered flight?</div>
-  <div class="field-row">
-    <input id="sg2" type="radio" name="choice2" value="sugar glider">
-    <label for="sg2">sugar glider</label>
-  </div>
-  <div class="field-row">
-    <input id="b2" type="radio" name="choice2" value="bat">
-    <label for="b2">bat</label>
-  </div>
-  <div class="field-row">
-    <input id="fs2" type="radio" name="choice2" value="flying squirrel">
-    <label for="fs2">flying squirrel</label>
-  </div>
-</fieldset>
-        </div>
-        <footer style="text-align: right">
-            <button onclick="submitAnswer1()">submit answer</button>
-            <button onclick="history.back()">cancel</button>
-        </footer>
-        <script>
-var submitAnswer1 = function() {
-
-  var radios = document.getElementsByName('choice2');
-  var val= "";
-  for (var i = 0, length = radios.length; i < length; i++) {
-      if (radios[i].checked) {
-         val = radios[i].value; 
-         break;
-       }
-  }
-  
-  if (val == "" ) {
-    alert('please select an answer.');
-  } else if ( val == "bat" ) {
-    alert('you are correct!');
-    history.back();
-  } else {
-    alert('unfortunately, you are wrong. try again!');
-  }
-};
-        </script>
-    </div></div>
 </body>
 </html>
