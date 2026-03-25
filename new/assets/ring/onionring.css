@@ -9,6 +9,13 @@
     margin: 0 auto;
     padding: 15px; /* creates some space around the widget */
     text-decoration: none;
+    image-rendering:-moz-crisp-edges;
+    image-rendering:-o-crisp-edges;
+    image-rendering:-webkit-optimize-contrast;
+    image-rendering:optimize-contrast;
+    image-rendering:crisp-edges;
+    image-rendering:pixelated;
+    -ms-interpolation-mode:nearest-neighbor;
   }
   
   #sandwichring table {
@@ -24,6 +31,13 @@
     padding: 15px; /* creates some space between the links and text inside the widget */
     text-decoration: none;
     color: white;
+    image-rendering:-moz-crisp-edges;
+    image-rendering:-o-crisp-edges;
+    image-rendering:-webkit-optimize-contrast;
+    image-rendering:optimize-contrast;
+    image-rendering:crisp-edges;
+    image-rendering:pixelated;
+    -ms-interpolation-mode:nearest-neighbor;
   }
   
   #sandwichring table tr td a {
