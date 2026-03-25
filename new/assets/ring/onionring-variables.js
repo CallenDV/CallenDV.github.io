@@ -7,8 +7,7 @@
 
 //the full URLs of all the sites in the ring
 var sites = [
-    'https://thecheesespot.xyz/',
-    'https://isthatjohncena.nekoweb.org'
+    'https://thecheesespot.xyz/'
     ];
     
     //the name of the ring
