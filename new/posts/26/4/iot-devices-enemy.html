@@ -123,6 +123,28 @@
             <div class="win7">
                 <div class="window active" style="max-width: 300px">
                     <div class="title-bar">
+                        <div class="title-bar-text">navigation.htm - IE8</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <ul>
+                            <li><a href="/new/posts/">blog mirror</a></li>
+                            <li><a href="/new/recipes/">recipe directory</a></li>
+                            <li><a href="/new/ring/">sandwichring</a></li>
+                            <li><a href="/new/devices.html">devices</a></li>
+                            <li><a href="/new/fanpages/">fanlistings</a></li>
+                            <li><a href="/new/fidgets.html">fidget (perfect)</a></li>
+                            <li><a href="/new/connectio.html">links outta here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
                         <div class="title-bar-text">WMP Legacy</div>
                         <div class="title-bar-controls">
                             <button aria-label="Close"></button>
@@ -167,8 +189,21 @@
             </div>
         </div>
         <div class="column main-column">
-            <h2>blog post: why js frameworks are awesome - 11/17/2024</h2>
-            javascript frameworks have come a long way, transforming how we build web applications. but with so many options—react, vue, angular—it can feel overwhelming.<p><br />here’s a quick breakdown:<br /></p><ul style="text-align: left;"><li>react: great for component-based architectures. ideal if you’re looking for flexibility and a massive community.</li></ul><ul style="text-align: left;"><li>vue: lightweight and approachable, perfect for small-to-medium projects without the steep learning curve.</li></ul><ul style="text-align: left;"><li>angular: a full-blown framework, best suited for large-scale applications requiring structure and robust features.</li></ul><p><br /><br />for developers, picking the right framework depends on the project’s needs. personally, i lean toward vue for its simplicity, but i’d love to hear what you’re using!<br /><br />that’s it for today! make sure to tune in to the cheeseblog for more programming insights and tech updates. cya!<br /></p><p><br /></p>
+            <h2>blog post: your iot devices are your enemy - 04/16/2026</h2>
+            <p>internet of things (iot) devices are generally considered useful, right? hell, one could even say made for you specifically. truth is, though, they do a little more than that. a lot more.</p>
+            <h3>data for dinner</h3>
+            <p>these devices are very good at 2 things: one, doing exactly as advertised. two, selling your data to bits. because these are usually just seen as common appliances, you often use them without thinking. turn on a light, tap a button on your toaster that makes it toast, open up the fridge, whatever.</p>
+            <p>smart devices, because they essentially have a mini computer inside them, and plenty of sensors, track this. see when you regularly flick a light switch, grab the milk from your fridge, put your clothes in the dryer. all of this is harvested, especially if you have an ecosystem of smart devices of the same brand. this can build information profiles on you, which are then sold to whoever is the highest bidder.</p>
+            <p>smart devices are often sneaky and chatty little bastards, too.  because you can’t install a custom linux distro on your smart microwave, the information flows to and from the appliance and some servers in some dark warehouse in the midwest us completely unseen. they will constantly ping servers with new information and data, slowly giving the manufacturer a general idea of you and your habits.</p>
+            <p>but whatever will you do? try out</p>
+            <h3>starvation</h3>
+            <p>thankfully, there are ways to figure out what exactly is being sent, and stop it.</p>
+            <p>my personal favorite way to do this is dns. obviously, because your washing machine doesn’t have dns settings, you can’t set it there, but you can set it on the next best place: your router, or a hotspot.</p>
+            <p>this is what i do, and have been doing for numerous months. and, wow, it really is disgusting, looking at the dns logs. i use nextdns, which is fairly novice friendly while still giving granular console, especially if you’re using the tui/console app. i’m sure you’ll be just as disgusted as me, once you look at the logs. my dns profile has every filter and setting on, as well as some more domains in the denylist, which is a lot when all combined. works for me, may not work for you. experiment and find the sweet spot.</p>
+            <p>when you block the data harvesting domains for these iot appliances, they usually still work. may lose one or two obscure features, but it’s really nothing to sob about.</p>
+            <p>roku is one of the worst offenders. the dns logs will get bloated, as they will constantly try to phone home to their servers to send lots of disgusting data, including watching habits, ad personalization, and even snapshots of what is on the screen, no matter what it is: the screensaver, a game console like the wii u, the home screen, or an app like hulu+. blocking them via dns is definitely worth it, next best option is getting a more privacy-conscious smart tv or just ditching the whole smart tv idea and, say, hooking up your computer to the tv.</p>
+            <h3>conclusion</h3>
+            <p>at the end of the day, convenience comes as a cost, a cost that is constantly changing and becoming more and more worth it to dodge. the line between smart device and surveillance machine (looking at you, ring) is becoming more and more difficult to spot. your smart dryer may just seem as a little harmless thing, but when you add up all of the “harmless” smart devices, it becomes a whole lot more dangerous. anyways, if you want more tips on dodging data and learning about privacy, be sure to tune into the cheeseblog for another post. cya!</p>
             <br>
             <div class="win7"><div role="tooltip">comments are not available here. to add a comment on this blog post, click <a href="https://cheesedevblog.blogspot.com/2025/05/hacking-switch-gameshare.html">here</a>.</div></div>
         </div>

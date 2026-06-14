@@ -123,6 +123,28 @@
             <div class="win7">
                 <div class="window active" style="max-width: 300px">
                     <div class="title-bar">
+                        <div class="title-bar-text">navigation.htm - IE8</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <ul>
+                            <li><a href="/new/posts/">blog mirror</a></li>
+                            <li><a href="/new/recipes/">recipe directory</a></li>
+                            <li><a href="/new/ring/">sandwichring</a></li>
+                            <li><a href="/new/devices.html">devices</a></li>
+                            <li><a href="/new/fanpages/">fanlistings</a></li>
+                            <li><a href="/new/fidgets.html">fidget (perfect)</a></li>
+                            <li><a href="/new/connectio.html">links outta here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
                         <div class="title-bar-text">WMP Legacy</div>
                         <div class="title-bar-controls">
                             <button aria-label="Close"></button>
@@ -167,8 +189,13 @@
             </div>
         </div>
         <div class="column main-column">
-            <h2>blog post: is ai coding an issue? - 11/17/2024</h2>
-            <p>ai tools like github copilot and tabnine are revolutionizing coding. they can autocomplete entire functions, suggest logic, and even help debug.<br /><br />but is this good or bad for developers?<br /></p><ul style="text-align: left;"><li>pro: speed and efficiency. ai reduces repetitive tasks and makes coding accessible to beginners.</li><li>con: over-reliance on ai could mean less understanding of the codebase and a loss of foundational skills.</li></ul><p><br />as a developer, i’ve tested copilot, and while it’s helpful, i see it more as an assistant than a replacement. it’s a tool—not a crutch. what’s your take on this growing trend?<br /><br />that’s all for now! don’t forget to check out the cheeseblog for more tech trends and insights. cya!</p><p>&nbsp;</p><p>[upload on 11/24/24]<br /></p>
+            <h2>blog post: the pros and the cons of serverless architecture - 11/07/2025</h2>
+            <p>heyo! this was a thought that popped into my mind when i was thinking about apps i could make, and i realized that this would actually be a pretty solid blog post. </p>
+            <p>this isn't usually a decision most developers have to make, as it is almost always clearly cut out. need to fetch or process stuff from a database? use a server. making something simple like a notes app or a calendar? easy peasy, that goes into serverless. however, there's a few edge cases that force you to make this decision, so i'll help explain what benefits you'd gain from it and the cons you'd gain from it.</p>
+            <p>for anyone new in the scene of programming, serverless architecture is when you develop an app that does not use a server. simple, right? all computation needed is done entirely on the client, which can save a ton of money, due to the costs of a dedicated server being super expensive. whether you're using a server host such as linode (not sponsored) or even self hosting, costs can rise quickly. serverless architecture eliminates that extra cost, only leaving you with the cost of hosting the client, which, depending on how much research you do and the type of app you're making, can be free.</p>
+            <p>now, let's start with the pros. i already went over one of them: the cost. if you skipped over that section, i'll do a quick summary: servers cost hella money, no matter what form you choose them in. serverless architecture doesn't use that money, letting you allocate it to more important things like hosting the client or paying devs for making the app, if you've got a team you pay. another useful thing that you benefit from it is automatic scaling. if you're a type of person that does minimal feature launches for your projects or products and then slowly expands (think the way google releases products), this can actually be really useful. the app grows with you, but with a server-based architecture, you'd be forced to periodically upgrade servers which would be really expensive, or get a massive server off the bat, which is insanely risky (what if your product is a total flop?), because then you'd just.. have it. not much to do with it, unless you decide to split it between projects. additionally, serverless architecture just frees up your hands and space on the clock. you don't have to spend any extra time dealing with maintenance because a storage unit died, you don't need to investigate why it is returning garbage data with tested-okay code, etc etc. you just deal with the client, and that's it. more time to work on development, more focus on what you need focusing on, so on so forth. next, the cons.</p>
+            <p>a major con about serverless architecture is just how much it relies on the device it is running on, and there isn't exactly any other device to relieve resource usage because all of the code is being ran on the client device. it makes the bold assumption that whatever you're doing and whatever you're using is on the same firmware as the device(s) you test it on, and that the computer is even powerful enough to run it. please, tell me the last time you saw minecraft with full shaders running on a galaxy s2 smartphone (the answer: you probably haven't, let alone at the standard 60fps/120fps of the phone). instruct me on how to get firefox 115 running on windows 98 se. this is one of the biggest reasons for why servers exist: they do the bulk of the computation. youtube would not be able to run the algorithm everyone tries to manipulate for views without their servers with 10 exabytes of storage for videos with their accompaning metadata and above-the-line processors. and not to mention, serverless applications make exploiting them for personal gain so much easier to do, because exploiters and decompilers will take your program in its full and rip it to shreds just to find a single vulnerability. better make sure it doesn't connect to the internet!</p>
+            <p>anyways, i had a ton of fun writing this, but that is to be expected when you haven't written any blog posts in over half a year. i really hope you learned at least something decent or useful from this, because that'd make me happy (and maybe attract more viewers to my blog if you really liked it). for more tech related insights and accidental forkbombs, tune into the cheeseblog for more posts just like this. cya!</p>
             <br>
             <div class="win7"><div role="tooltip">comments are not available here. to add a comment on this blog post, click <a href="https://cheesedevblog.blogspot.com/2025/05/hacking-switch-gameshare.html">here</a>.</div></div>
         </div>
