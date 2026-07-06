@@ -15,6 +15,7 @@
     min-width: 100% !important;
     min-height: 100% !important;
     margin: 0 !important;
+    border:none;
 }
 .cornertextthingy {
     position: absolute !important;
@@ -26,4 +27,7 @@
     border-top: 1px black solid !important;
     border-right: 1px black solid !important;
     background-color: #cdcdcd !important;
+}
+.cornertextthingy a {
+    text-decoration: none;
 }
