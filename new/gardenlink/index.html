@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/7.css/dist/7.scoped.css">
     <link rel="icon" type="image/icon" href="/new/assets/notext-tcslogo.png">
-    <title>blog - tcs</title>
+    <link rel="stylesheet" href="https://dsring.neocities.org/dswidget/onionring.css">
+    <title>gardenlink - tcs</title>
     <style>
         body {
             margin: 0;
@@ -50,7 +51,6 @@
         .side-column {
             flex: 1;
             margin: 0px 9px 0px 9px;
-            max-width: 20%;
             background-image: url("https://wallpaperaccess.com/full/9368870.png");
             background-attachment: fixed;
         }
@@ -61,6 +61,29 @@
 
         .rssfeedgoesrighthereontherightofthepage {
             float: right;
+        }
+
+        #aero-ring {
+            background: linear-gradient(to bottom, #0af 0%, #07c 100%);
+            border-radius: 10px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.5),
+            inset 0 2px 1px rgba(255, 255, 255, 0.15),
+            inset 0 -2px 1px rgba(0, 0, 0, 0.35);
+            font-family: sans-serif;
+            margin: 10px auto 0px auto;
+            max-width: 15rem;
+            padding: 0.75rem;
+        }
+
+        #aero-ring a,
+        #aero-ring a:visited {
+            color: white !important;
+        }
+
+        #aero-ring a:focus,
+        #aero-ring a:hover,
+        #aero-ring a:active {
+            color: lightgrey !important;
         }
     </style>
 </head>
@@ -73,22 +96,6 @@
 
     <div class="container">
         <div class="column side-column">
-            <div class="win7">
-                <div class="window active" style="max-width: 300px">
-                    <div class="title-bar">
-                        <div class="title-bar-text">takemehome.htm - IE8</div>
-                        <div class="title-bar-controls">
-                            <button aria-label="Close"></button>
-                        </div>
-                    </div>
-                    <div class="window-body has-space">
-                        <span>click the button below to go to the home page.</span>
-                        <br>
-                        <br>
-                        <a href="https://www.thecheesespot.xyz/new"><button>take me home!</button></a>
-                    </div>
-                </div>
-            </div>
             <h2 style="color: white;">personal stuff</h2>
             <div class="win7">
                 <div class="window active" style="max-width: 300px">
@@ -99,7 +106,7 @@
                         </div>
                     </div>
                     <div class="window-body has-space">
-                        <iframe width="100%" height="100%" style="border:none; border-radius:4px;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
+                        <iframe width="100%" height="100%" style="border:none; border-radius:4px;" src="https://nvlk.dimden.dev" name="neolink"></iframe>
                     </div>
                 </div>
             </div>
@@ -150,10 +157,9 @@
                     <div class="window-body has-space">
                         <span>links to my other corners on the internet</span>
                         <ul>
-                            <li><a href="https://prizvideo.github.io/PrizVdeo-Main">prizvideo (main)</a></li>
-                            <li><a href="https://prizvideo.github.io/PrizVdeo-Test">prizvideo (test)</a></li>
+                            <li><a href="https://prizvideo.github.io/">prizvideo</a></li>
                             <li><a href="https://cheesedevblog.blogspot.com">my blog</a></li>
-                            <li><a href="https://spacehey.com/cheesedev">my spacehey</a></li>
+                            <li><a href="https://spacehey.com/hamburgerpancake">my spacehey</a></li>
                         </ul>
                     </div>
                 </div>
@@ -228,33 +234,99 @@
             </div>
         </div>
         <div class="column main-column">
-            <h2>blog post: i switched back to windows 7 from 10—here’s my thoughts so far - 11/23/2025  <a class="rssfeedgoesrighthereontherightofthepage" href="https://cheesedevblog.blogspot.com/feeds/posts/default"><img src="/new/assets/valid-atom.png"></a></h2>
-            <p>it has been exactly a week since i installed windows 7 ultimate onto my daily driver laptop. there’s some parts about it i like, some i don’t, but for now, it seems that i’ll be staying on it.</p>
-            <h3>pros</h3>
-            <p>i like a lot of parts about windows 7, arguably more than the things i like about windows 10 or any newer windows operating system.</p>
-            <h4>speed</h4>
-            <p>windows 7, at least on my laptop, is able to keep my pace. windows 10 would continuously drag its feet whenever i tried to do the most basic of tasks.</p>
-            <p>for example—logging in. on windows 10, i would have to wait nearly 16 minutes combined just to even begin using my computer. that’s atrocious, especially for a computer that shipped with the operating system. this was already after i had cut out bloat where possible, such as switching to a local account, removing hp bullshit, and killing anything non-essential to the os. however, even that isn’t enough with the horrendous amount of background processes 10 kickstarts for no reason. windows 7, on the other hand, only takes a combined 1 minute for me to log in. i don’t have to start it up early like you’d heat up a car in winter before driving. i boot it up, and i get to work (or whatever i am doing on my computer).</p>
-            <p>another example is uwp apps. windows 10 (and lets be honest, most modern apps) expect you to have a fully specced out workstation or gaming computer. that isn’t even a concept when it comes to my laptop. nada. no no. this means that most apps will pretend they are running on a regular old potato, when they in fact are running on a “fully capable” laptop. the uwp windows settings app roleplays as a sloth, and my computer gets hot enough to toast an egg. that’s not a computer issue, that’s an optimization issue. since uwp doesn’t and literally cannot exist on windows 7, you get the older native apps that actually run decently. it’s not like these apps are missing much functionality, anyways.</p>
-            <h4>looks</h4>
-            <p>this definitely isn’t a new point of discussion, i talked about this in my “why windows 7 is better than newer windows versions” blog post. however, it’s just too big of a point to ignore or avoid. windows aero is beautiful, and it is a great showcase of the features and functionality windows 7 has to offer—certainly more than windows 10 or 11 exhibit, anyways. even the windows basic theme isn’t necessarily bad, just not exactly preferable in comparison to the aero theme.</p>
-            <p>every icon just has this sense of realism to it, and every application just feels right at home on 7. hell, even just get a modern app like obs, slap on the light aero theme to it (yes you can do this by setting the theme to “system”), and it looks relatively decent and fits in well, even if not as well integrated as, say, the windows live essentials pack or the pre-installed applications. with the aero theme, there’s no app that doesn’t look at least decent.</p>
-            <p>there’s not much more for me to say that i haven’t said already. windows 7 simply looks great, that’s that.</p>
-            <h4>gaming</h4>
-            <p>this may come as a surprise to you, but windows 7 is actually great for gaming—or rather, retro gaming.</p>
-            <p>there’s actually some fair reasoning behind this, most of it having to do with the backend of the operating systems, not what the user actually ends up seeing. windows 10 has mostly killed retro gaming on itself, unless you are under very specific circumstances. this is because likely in an attempt to “streamline” the process of running apps and games, most older directx stuff was ripped out, even the parts that weren’t full blown directx frameworks. additionally, a lot of the older .net things, like .net framework 2.0 or 3.0, were just completely removed, further battering the corpse of what might have been retro gaming on 10 natively. some other things, such as a replacement of long-standing tools other games used being launched into orbit, just completely break older games on windows 10.</p>
-            <p>windows 7, on the other hand, honors these games (for the most part). even if it itself cannot exchange the correct things, it’ll guide the game in the right direction so that it does work and doesn’t completely crumble to pieces. this is what allows somewhat ancient games like comanche 4 to run natively, even if a little buggy. this is a lifesaver in the case of games such as half life (unpatched, not the tampered version on steam today), the sims 1, and gta: vice city. all of these would be ripped to pieces on 10.</p>
-            <h4>simplicity</h4>
-            <p>it was part of the original advertising campaigns: windows 7 is simple. not too simple to the point where you can’t do anything productive on it (chromeos ahem ahem), but not so sophisticated that it alienates half of the userbase that came to it for something that just… works. balanced. you buy the shiny laptop with 7 preinstalled, you plug it in, set it up, and done. a poweruser? build your own rig. get a windows 7 install disk. customize it to your heart’s extent. i’m gonna be honest, i genuinely don’t think there will ever be another windows os quite like 7.</p>
-            <h3>cons</h3>
-            <h4>drivers</h4>
-            <p>do you want to know what isn’t simple? drivers! drivers are a pain in the ass nowadays, in terms of windows 7.  they’re like a necessary evil—your computer is convinced that it is secretly running with an intel 486 chip and a big mac as a gpu without them, but finding them can sometimes feel impossible. most hardware past like 2019 that had windows 7 drivers just started dropping like flies. now, with real gaming rig-level hardware, it’s nearly impossible to make the two be kind to each other without straight up downgrading some parts or hacking together a custom driver that has a 50% chance of working, 50% chance of bricking your install until you enter safe mode. even on older hardware that isn’t necessarily that old, finding drivers that work, let alone bring aero to the table, is all holy hell. tools lke driveridentifier have made this process a bit quicker, but it is stll so, so annoying.</p>
-            <h4>compatibility</h4>
-            <p>you probably saw this coming from a mile away, but here it is. compatibility. it is miserable on windows 7, when you’re trying to run newer apps and games. saw that shiny new game on the steam store page? suck it up, windows 10 support and higher. java sdks newer than version 17? forget it. new-ish apps in your optimized workflow? sorry, find a windows 7 alternative. it is pure pain. most of my workflow already supported windows 7, but if yours didn’t, you were just out of luck.</p>
-            <h3>my thoughts and a conclusion</h3>
-            <p>i personally think that for the issues, there’s always two benefits to windows 7, which is why i will be staying on it. most of the issues are just things you work around, anyways—you get your drivers, you’re done. no more time wasted on the involuntary scavenger hunt. same deal with the apps. take from this what you will. if you’re a linux bro that couldn’t care less about windows, keep not caring. if you’ve never even heard of me before and are intrigued about my content, read my other posts. if you were contemplating the switch, use this as guidance. i don’t care. i just don’t want this to be a big ol waste of time, there needs to be some value you get from this post. anyways, if you want more tech related extravaganzas, tune in to the cheeseblog for another post. cya!</p>
+            <h2>gardenlink</h2>
+            <p>hello!!</p>
+            <h3>what is gardenlink?</h3>
+            <p>gardenlink is an embeddable ad system, similar to and inspired by <a href="https://dimden.dev/navlinkads">dimden.dev's navlink ads system</a>, which helps share webgardens. it cycles every 2 minutes.</p>
+            <h3>how can i embed it?</h3>
+            <p></p>
+            <h3>how can i join?</h3>
+            <p>i recommend messaging me at hamburgerpancake on crosstalk.im, as that is where i check my messages the most frequently. that, or <a href="https://xf1re.com/profile/hamburgerpancake">xf1re</a>. you also can email me.</p>
             <br>
-            <div class="win7"><div role="tooltip">comments are not available here. to add a comment on this blog post, click <a href="https://cheesedevblog.blogspot.com/2025/05/hacking-switch-gameshare.html">here</a>.</div></div>
+            <div class="win7">
+                <div class="window active">
+                    <div class="title-bar">
+                        <div class="title-bar-text">advertisement.htm - IE8</div>
+                        <div class="title-bar-controls"></div>
+                    </div>
+                    <div class="window-body has-space">
+                        <img src="https://files.catbox.moe/ts4ts5" style="max-width:100% !important;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column side-column">
+            
+            <h2 style="color: white;">news/blog posts</h2>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text">blinker.htm - IE8</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Close" disabled></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <p>hey! before you read anything else, just know that i made a few blinkers! or buttons! or whatever they're called. you can see em under this.</p>
+                        <a href="https://www.thecheesespot.xyz/new"><img src="https://files.catbox.moe/6xnaor.gif"></a> <a href="https://www.thecheesespot.xyz/new"><img src="https://files.catbox.moe/ucksl6.gif"></a>
+                        <p>and here's how to put em into your website:</p>
+                        <textarea style="width:95%;height:75px;min-width:95% !important;resize:none;" disabled content-type="text">
+<a href="https://www.thecheesespot.xyz/new"><img src="https://files.catbox.moe/6xnaor.gif"></a>
+
+<a href="https://www.thecheesespot.xyz/new"><img src="https://files.catbox.moe/ucksl6.gif"></a>
+                        </textarea>
+                        <hr>
+                        <p>okay, you may now carry on.</p>
+                    </div>
+                </div>
+            </div>
+            <p style="color: white;">note: (almost) everything here, excluding QOTD and the portfolio updates, is pulled directly from my dedicated blog site, the <a href="https://cheesedevblog.blogspot.com">cheeseblog</a>.</p>
+            <hr>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text"><b>qotd</b> for 5/28/25</div>
+                    </div>
+                    <div class="window-body has-space">
+                        <p>woohoo! time for question of the day. play it by pressing the link below. <br><br><a href="#qotd2"><button>play the qotd</button></a></p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text"><b>qotd</b> for 5/27/25</div>
+                    </div>
+                    <div class="window-body has-space">
+                        <p>woohoo! time for question of the day. play it by pressing the link below. <br><br><a href="#qotd1"><button>play the qotd</button></a></p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text"><b>hacking switch gameshare</b> - 5/07/25</div>
+                    </div>
+                    <div class="window-body has-space">
+                        <p>hi everyone!! this is gonna be very rushed because i just got the idea fresh on my mind and i don't have the time to write a full blog posts, but i swear... <br><br>read the full post <a href="posts/25/5/hacking-switch-gameshare.html">here</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="win7">
+                <div class="window active" style="max-width: 300px">
+                    <div class="title-bar">
+                        <div class="title-bar-text"><b>worldcoin sol... didn't exist</b> - 5/01/25</div>
+                    </div>
+                    <div class="window-body has-space">
+                        <p>you ever hear about a company so convinced of its own importance that it builds an entire multi-million dollar project just to "solve" a problem it basically... <br><br>read the full post <a href="posts/25/5/worldcoin-solves-a.html">here</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p style="color: white;">view all previous blog posts <a href="./posts">here</a>.</p>
         </div>
     </div>
 </body>
