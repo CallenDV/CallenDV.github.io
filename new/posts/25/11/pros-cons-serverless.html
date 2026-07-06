@@ -58,6 +58,10 @@
         .main-column {
             flex: 2;
         }
+
+        .rssfeedgoesrighthereontherightofthepage {
+            float: right;
+        }
     </style>
 </head>
 <body>
@@ -208,7 +212,7 @@
             </div>
         </div>
         <div class="column main-column">
-            <h2>blog post: the pros and the cons of serverless architecture - 11/07/2025</h2>
+            <h2>blog post: the pros and the cons of serverless architecture - 11/07/2025  <a class="rssfeedgoesrighthereontherightofthepage" href="https://cheesedevblog.blogspot.com/feeds/posts/default"><img src="/new/assets/valid-atom.png"></a></h2>
             <p>heyo! this was a thought that popped into my mind when i was thinking about apps i could make, and i realized that this would actually be a pretty solid blog post. </p>
             <p>this isn't usually a decision most developers have to make, as it is almost always clearly cut out. need to fetch or process stuff from a database? use a server. making something simple like a notes app or a calendar? easy peasy, that goes into serverless. however, there's a few edge cases that force you to make this decision, so i'll help explain what benefits you'd gain from it and the cons you'd gain from it.</p>
             <p>for anyone new in the scene of programming, serverless architecture is when you develop an app that does not use a server. simple, right? all computation needed is done entirely on the client, which can save a ton of money, due to the costs of a dedicated server being super expensive. whether you're using a server host such as linode (not sponsored) or even self hosting, costs can rise quickly. serverless architecture eliminates that extra cost, only leaving you with the cost of hosting the client, which, depending on how much research you do and the type of app you're making, can be free.</p>
