@@ -19,15 +19,18 @@
 }
 .cornertextthingy {
     position: absolute !important;
-    z-index: 3 !important;
+    z-index: 9999999999999999999 !important;
     bottom: 0 !important;
     left: 0 !important;
-    padding: 3px !important;
+    padding: 2px !important;
     border-top-right-radius: 3px !important;
-    border-top: 1px black solid !important;
-    border-right: 1px black solid !important;
+    border-top: 1px #aaa solid !important;
+    border-right: 1px #aaa solid !important;
     background-color: #cdcdcd !important;
 }
 .cornertextthingy a {
     text-decoration: none;
+    font-size: smaller;
+    color: black;
+    font-family: "MS Gothic";
 }
