@@ -162,4 +162,15 @@ User-agent: YandexAdditionalBot
 User-agent: YiyanBot
 User-agent: YouBot
 User-agent: ZanistaBot
+User-agent: Adsbot
+User-agent: peer39_crawler
+User-agent: peer39_crawler/1.0
+User-agent: BLEXBot
+User-agent: TurnitinBot
+User-agent: AcademicBotRTU
+User-agent: CheckMarkNetwork/1.0 (+https://www.checkmarknetwork.com/spider.html)
+User-agent: BrandVerity/1.0
+User-agent: SemrushBot-FT
+User-agent: PiplBot
+User-agent: AIRoboBot
 Disallow: /
