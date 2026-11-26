@@ -34,3 +34,6 @@
     color: black;
     font-family: "MS Gothic";
 }
+.cornertextthingy a:hover {
+    color: rgb(0, 110, 255);
+}
